@@ -12,10 +12,7 @@
     {% if post.image %}
       <p>
         <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
-          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-               width="900" height="300"
-               data-src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ post.image }}"
-               alt="" />
+          <img src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ post.image }}" width="900" height="300" alt="" />
         </a>
       </p>
     {% endif %}
