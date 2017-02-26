@@ -1,5 +1,7 @@
 # www.robotstxt.org/
 
-# Allow crawling of all content
+# Allow crawling of all content (no value for Disallow)
 User-agent: *
 Disallow:
+
+# To block all robots during development, use “Disallow: /“

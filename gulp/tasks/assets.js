@@ -28,6 +28,8 @@ gulp.task('scripts', () =>
   gulp.src([
     'src/assets/javascript/vendor/jquery/*.js',
     'src/assets/javascript/vendor/plugins/**/*.js',
+    'src/assets/javascript/vendor/uikit/*.js',
+    'src/assets/javascript/vendor/uikit/**/*.js',
     'src/assets/javascript/main.js'
   ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
@@ -146,21 +148,23 @@ var pageDimensions = [{
                         height: 960
                       }];
 
-// 'gulp styles:critical:page' -- extract layout.page critical CSS into /_includes/critical-page.css
-gulp.task('styles:critical:page', function () {
-  return gulp.src('.tmp/dist/*.html')
+// 'gulp styles:critical:home' -- extract layout.home critical CSS into /_includes/critical-home.css
+gulp.task('styles:critical:home', function () {
+  return gulp.src('.tmp/dist/index.html')
     .pipe(critical({
       base: '.tmp',
       inline: false,
       css: ['src/_includes/style.css'],
       dimensions: pageDimensions,
-      dest: '../src/_includes/critical-page.css',
+      dest: '../src/_includes/critical-home.css',
       minify: true,
       extract: false,
-      include: [/fonts-loaded/,/yd-grid/,/yd-content/,/^[a-zA-Z0-9.!@?#"$%&:';()*\+,\/;\-=[\\\]\^_{|}<>~` ]+$/],
+      include: [/fonts-loaded/],
       ignore: ['@font-face',/url\(/] // defer loading of webfonts and background images
     }))
 });
+
+
 // Function to properly reload your browser
 function reload(done) {
   browserSync.reload();

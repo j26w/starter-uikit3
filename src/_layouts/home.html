@@ -2,82 +2,236 @@
 layout: default
 ---
 
-{% include site__logo.html %} 
-{% include site__nav-main.html %}     
-<div class="yd-container">
-  <p><a href="" class="yd-button">Sample Button</a></p>
-  {% include page__header.html %}
-  <section class="page__content"></section>
-</div>
-<div class="yd-container__fullwidth">
-  <div class="yd-container"> 
-    <article class="grid-width-12">
-      <p>This is a full width container with an article element</p>
-    </article>
-  </div>
-</div>
-<div class="yd-container">
-	<section>
-	  <h1>H2: Section Element</h1>
-	  <p>According to W3C's HTML5 documentation: A section is a thematic grouping of content, typically with a heading. A home page could normally be split into sections for introduction, content, and contact information.</p>
-		
-		<article class="yd-content">
-			<header>
-				<h2>H2: Header Element Inside Article</h2>
-				<p>Some header paragraph text.</p>
-			</header>
-			
-			<p>The article element specifies independent, self-contained content.</p>
-			<p>An article should make sense on its own, and it should be possible to read it independently from the rest of the web site.</p>
-			<p>Examples of where an article element can be used:</p>
-				<ul>
-					<li>Forum post</li>
-					<li>Blog post</li>
-					<li>Newspaper article</li>
-				</ul>
-			<h3>H3 Heading</h3>
-			<h4>H4 Heading</h4>
-			<h2 class="yd-text-paragraph yd-margin-bottom-remove">This is a heading but with the paragraph font-family.</h2>
-			  <ul class="post-list">
-			    {% for post in site.posts %}
-			      <li>
-			        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
 
-			        <h2>
-			          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-			        </h2>
-			      </li>
-			    {% endfor %}
-			  </ul>
+	{% include site__nav-main.html %}
 
-	  		<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-			<p><a href="" class="yd-button">Sample Button</a></p>
-			<p>The images in the following list utilize deferred loading so they don't prevent the page from loading while they download. The script is located right before the end body tag.</p>
-			<ul>
-				<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-						 data-src="{{ site.url }}{{ site.baseurl }}/assets/images/bridge.jpg"></li>
-				<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-						 data-src="{{ site.url }}{{ site.baseurl }}/assets/images/clouds.jpg" 
-						 alt="Image description"></li>
-			</ul>
-		</article>
-		<aside class="yd-sidebar">
-			<h3>H3 Aside Element</h3>
-			<p>The aide element defines some content aside from the content it is placed in (like a sidebar).</p>
-			<p>The aside content should be related to the surrounding content.</p>
-			<ul>
-				<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-						 data-src="{{ site.url }}{{ site.baseurl }}/assets/images/mountains.jpg" 
-						 alt="Image description"></li>
-			</ul>
-		</aside>
-		 <footer>
-	        <h3>H3 Footer Element</h3>
-	        <p>The footer element specifies a footer for a document or section.</p>
-	        <p>A  footer element should contain information about its containing element.</p>
-	        <p>A footer typically contains the author of the document, copyright information, links to terms of use, contact information, etc.</p>
-	        <p>You may have several footer elements in one document.</p>
-	        </p>
-	    </footer>
-	</section>
+	<div class="uk-grid" data-uk-grid-margin>
+	    <div class="uk-width-medium-1-1">
+
+	        <div class="uk-vertical-align uk-text-center" style="background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEzMHB4IiBoZWlnaHQ9IjQ1MHB4IiB2aWV3Qm94PSIwIDAgMTEzMCA0NTAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMzAgNDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIxMTMwIiBoZWlnaHQ9IjQ1MCIvPg0KPC9zdmc+DQo=') 50% 0 no-repeat; height: 450px;">
+	            <div class="uk-vertical-align-middle uk-width-1-2">
+	                <h1 class="uk-heading-large">Sample Heading</h1>
+	                <p class="uk-text-large">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+	                <p>
+	                    <a class="uk-button uk-button-primary uk-button-large" href="#">Button</a>
+	                    <a class="uk-button uk-button-large" href="#">Button</a>
+	                </p>
+	            </div>
+	        </div>
+
+	    </div>
+	</div>
+
+	<div class="uk-grid" data-uk-grid-margin>
+	    <div class="uk-width-medium-1-3">
+	        <div class="uk-grid">
+	            <div class="uk-width-1-6">
+	                <i class="uk-icon-cog uk-icon-large uk-text-primary"></i>
+	            </div>
+	            <div class="uk-width-5-6">
+	                <h2 class="uk-h3">Sample Heading</h2>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="uk-width-medium-1-3">
+	        <div class="uk-grid">
+	            <div class="uk-width-1-6">
+	                <i class="uk-icon-thumbs-o-up uk-icon-large uk-text-primary"></i>
+	            </div>
+	            <div class="uk-width-5-6">
+	                <h2 class="uk-h3">Sample Heading</h2>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="uk-width-medium-1-3">
+	        <div class="uk-grid">
+	            <div class="uk-width-1-6">
+	                <i class="uk-icon-cloud-download uk-icon-large uk-text-primary"></i>
+	            </div>
+	            <div class="uk-width-5-6">
+	                <h2 class="uk-h3">Sample Heading</h2>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	                
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="uk-grid" data-uk-grid-margin>
+	    <div class="uk-width-medium-1-3">
+	        <div class="uk-grid">
+	            <div class="uk-width-1-6">
+	                <i class="uk-icon-dashboard uk-icon-large uk-text-primary"></i>
+	            </div>
+	            <div class="uk-width-5-6">
+	                <h2 class="uk-h3">Sample Heading</h2>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="uk-width-medium-1-3">
+	        <div class="uk-grid">
+	            <div class="uk-width-1-6">
+	                <i class="uk-icon-comments uk-icon-large uk-text-primary"></i>
+	            </div>
+	            <div class="uk-width-5-6">
+	                <h2 class="uk-h3">Sample Heading</h2>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="uk-width-medium-1-3">
+	        <div class="uk-grid">
+	            <div class="uk-width-1-6">
+	                <i class="uk-icon-briefcase uk-icon-large uk-text-primary"></i>
+	            </div>
+	            <div class="uk-width-5-6">
+	                <h2 class="uk-h3">Sample Heading</h2>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<hr class="uk-grid-divider">
+
+	<div class="uk-grid" data-uk-grid-margin>
+
+	    <div class="uk-width-medium-1-2">
+	        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
+				data-src="{{ site.url }}{{ site.baseurl }}/assets/images/mountains.jpg"
+				alt="Image description" />
+	    </div>
+
+	    <div class="uk-width-medium-1-2">
+	        <h1>Heading</h1>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	        <h2>Subheading</h2>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	        <a class="uk-button uk-button-primary" href="#">Button</a>
+	    </div>
+
+	</div>
+
+	<hr class="uk-grid-divider">
+
+	<div class="uk-grid" data-uk-grid-margin>
+	    <div class="uk-width-medium-1-2">
+	        <h1>Heading</h1>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	        <h2>Subheading</h2>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	        <a class="uk-button uk-button-primary" href="#">Button</a>
+	    </div>
+
+	    <div class="uk-width-medium-1-2">
+ 			<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
+				data-src="{{ site.url }}{{ site.baseurl }}/assets/images/bridge.jpg"
+				alt="Image description" />   
+	     </div>
+	</div>
+
+	<hr class="uk-grid-divider">
+
+	<div class="uk-grid" data-uk-grid-margin>
+
+	    <div class="uk-width-medium-1-2">
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
+				 data-src="{{ site.url }}{{ site.baseurl }}/assets/images/clouds.jpg" 
+				 alt="Image description" />
+	    </div>
+
+	    <div class="uk-width-medium-1-2">
+	        <h1>Heading</h1>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	        <h2>Subheading</h2>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	        <a class="uk-button uk-button-primary" href="#">Button</a>
+	    </div>
+
+	</div>
+
+	<div class="uk-grid" data-uk-grid-margin>
+	    <div class="uk-width-medium-1-1">
+	        <div class="uk-panel uk-panel-box uk-text-center">
+	            <p><strong>Phasellus viverra nulla ut metus.</strong> Quisque rutrum etiam ultricies nisi vel augue. <a class="uk-button uk-button-primary uk-margin-left" href="#">Button</a></p>
+	        </div>
+	    </div>
+	</div>
+
+	<h1 class="uk-text-center">Our Clients</h1>
+
+	<div class="uk-grid" data-uk-grid-margin>
+	    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+	        <figure class="uk-overlay uk-overlay-hover">
+	            <img width="350" height="150" alt="Image"src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+	           <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+	                <div>Client Name</div>
+	            </figcaption>
+	            <a class="uk-position-cover" href="#"></a>
+	        </figure>
+	    </div>
+
+	    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+	         <figure class="uk-overlay uk-overlay-hover">
+	            <img width="350" height="150" alt="Image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+	            <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+	                <div>Client Name</div>
+	            </figcaption>
+	            <a class="uk-position-cover" href="#"></a>
+	        </figure>
+	    </div>
+
+	    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+	       <figure class="uk-overlay uk-overlay-hover">
+	            <img width="350" height="150" alt="Image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+	            <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+	                <div>Client Name</div>
+	            </figcaption>
+	            <a class="uk-position-cover" href="#"></a>
+	        </figure>
+	    </div>
+
+	    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+	        <figure class="uk-overlay uk-overlay-hover">
+	            <img width="350" height="150" alt="Image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+	            <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+	                <div>Client Name</div>
+	            </figcaption>
+	            <a class="uk-position-cover" href="#"></a>
+	        </figure>
+	    </div>
+
+	    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+	         <figure class="uk-overlay uk-overlay-hover">
+	            <img width="350" height="150" alt="Image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+	             <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+	                <div>Client Name</div>
+	            </figcaption>
+	            <a class="uk-position-cover" href="#"></a>
+	        </figure>
+	    </div>
+
+	    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+	         <figure class="uk-overlay uk-overlay-hover">
+	            <img width="350" height="150" alt="Image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+	            <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+	                <div>Client Name</div>
+	            </figcaption>
+	            <a class="uk-position-cover" href="#"></a>
+	        </figure>
+	    </div>
+	</div>
+
 </div>
+
+{% include site__nav-offcanvas.html %}

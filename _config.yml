@@ -1,9 +1,9 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
-title: Starter Webapp
-description: A starter project build on Jekyll and Gulp.
+title: Starter Uikit3
+description: A starter project build on Jekyll and Gulp with Uikit3 framework.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: http://starter-webapp.dev
+url: http://starter-uikit3.dev
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
@@ -48,12 +48,7 @@ lsi: false
 # Only make the last 10 posts so generating isn't slow
 limit_posts: 10
 
-# Permalink structure and pagination options
-# Jekyll configuration
-permalink: /:categories/:title/
-paginate: 10
-paginate_path: 'page:num'
-excerpt_separator: ''
+
 
 # Markdown library and options
 markdown                 : kramdown
@@ -71,7 +66,7 @@ highlighter: rouge
 gems:
   - jekyll-feed
   - jekyll-gist
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
@@ -96,3 +91,18 @@ defaults:
       breadcrumbs:
         - label: "News and Articles"
           url: /articles/
+
+# Plugin: Pagination (jekyll-paginate-v2)
+pagination:
+  enabled      : true
+  debug        : false
+  per_page     : 2
+  permalink    : "/page/:num/"
+  title        : ":title - Page :num of :max"
+  limit        : 0
+  sort_field   : "date"
+  sort_reverse : true
+  trail: 
+    before: 2 # The number of links before the current page
+    after: 2  # The number of links after the current page
+

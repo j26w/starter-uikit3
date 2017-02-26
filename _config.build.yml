@@ -2,7 +2,7 @@
 # Overrides these options in _config.yml
 
 baseurl: ""
-url: http://lab.yellowdogagency.com
+url: http://starter-uikit3.yellowdogagency.com
 
 # Hides your drafts and future posts
 future: false

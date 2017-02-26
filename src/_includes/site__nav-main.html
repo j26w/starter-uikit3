@@ -1,11 +1,18 @@
-<nav role="navigation">
-	<ul>
-	  {% for item in site.data.navigation %}
-        {% if item.url == thisUrl %}
-        <li class="current">{{ item.title }}</li>
-        {% else %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-	</ul>
+<nav class="uk-navbar uk-margin-large-bottom">
+    <a class="uk-navbar-brand uk-hidden-small" href="{{ site.url }}">{{ site.title }}</a>
+    <ul class="uk-navbar-nav uk-hidden-small">
+        {% for item in site.data.navigation.main %}
+	       	
+	       	{% assign class = nil %}
+	        {% if page.url contains item.url %}
+	        	{% assign class = 'uk-active' %}
+	        {% endif %}
+	        <li class="{{ class }}">
+	        	<a href="{{ site.url}}{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+	        </li>
+
+	    {% endfor %}
+    </ul>
+    <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+    <div class="uk-navbar-brand uk-navbar-center uk-visible-small">Brand</div>
 </nav>
