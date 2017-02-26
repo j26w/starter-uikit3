@@ -2,9 +2,7 @@
 
 @import "vendor/uikit/uikit-mixins.scss";
 
-$navbar-background: #fff;
-$base-body-background: #fff;
-$base-body-font-family: Georgia, Helvetica, Arial, sans-serif;
+@import "variable-overrides.scss";
 
 @import "vendor/uikit/uikit.scss";
 

@@ -120,7 +120,6 @@ gulp.task('styles', () =>
       showFiles: true
     }))
     .pipe(gulp.dest('src/_includes/'))
-    .pipe(gulp.dest('dist/assets/stylesheets/'))
     .pipe(when(argv.prod, rename({suffix: '.min'})))
     .pipe(when(argv.prod, when('*.css', cssnano({autoprefixer: false}))))
     .pipe(when(argv.prod, size({
@@ -135,6 +134,8 @@ gulp.task('styles', () =>
       showFiles: true
     })))
     .pipe(gulp.dest('.tmp/assets/stylesheets'))
+    .pipe(when(!argv.prod, browserSync.stream()))
+    .pipe(gulp.dest('dist/assets/stylesheets'))
     .pipe(when(!argv.prod, browserSync.stream()))
 );
 
