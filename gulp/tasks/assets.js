@@ -120,6 +120,7 @@ gulp.task('styles', () =>
       showFiles: true
     }))
     .pipe(gulp.dest('src/_includes/'))
+    .pipe(gulp.dest('dist/assets/stylesheets/'))
     .pipe(when(argv.prod, rename({suffix: '.min'})))
     .pipe(when(argv.prod, when('*.css', cssnano({autoprefixer: false}))))
     .pipe(when(argv.prod, size({
@@ -177,7 +178,7 @@ gulp.task('serve', (done) => {
     // tunnel: true,
     // open: false,
   
-    host: "starter-webapp.dev"
+    host: "starter-uikit3.dev"
   });
   done();
 

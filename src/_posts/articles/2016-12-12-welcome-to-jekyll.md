@@ -1,6 +1,6 @@
 ---
 title: Title of the post
-image: desk.jpg
+image: flower.jpg
 tags: [sampletag]
 author: jane_doe
 ---

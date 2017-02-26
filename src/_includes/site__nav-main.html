@@ -1,6 +1,6 @@
-<nav class="uk-navbar uk-margin-large-bottom">
+<nav class="uk-navbar uk-margin-top uk-margin-bottom">
     <a class="uk-navbar-brand uk-hidden-small" href="{{ site.url }}">{{ site.title }}</a>
-    <ul class="uk-navbar-nav uk-hidden-small">
+    <ul class="uk-navbar-nav uk-navbar-flip uk-hidden-small">
         {% for item in site.data.navigation.main %}
 	       	
 	       	{% assign class = nil %}
@@ -13,6 +13,6 @@
 
 	    {% endfor %}
     </ul>
-    <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+    <a href="#offcanvas" class="uk-navbar-toggle uk-navbar-flip uk-visible-small" data-uk-offcanvas></a>
     <div class="uk-navbar-brand uk-navbar-center uk-visible-small">Brand</div>
 </nav>
