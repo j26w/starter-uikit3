@@ -151,10 +151,25 @@ var pageDimensions = [{
                       }];
 
 // 'gulp styles:critical:home' -- extract layout.home critical CSS into /_includes/critical-home.css
+// gulp.task('styles:critical:home', function () {
+//  return gulp.src('.tmp/dist/index.html')
+//    .pipe(critical({
+//      base: '.tmp',
+//      inline: false,
+//      css: ['src/_includes/style.css'],
+//      dimensions: pageDimensions,
+//      dest: '../src/_includes/critical-home.css',
+//      minify: true,
+//      extract: false,
+//      include: [/fonts-loaded/],
+//      ignore: ['@font-face',/url\(/] // defer loading of webfonts and background images
+//    }))
+// });
+// 'gulp styles:critical:home' -- extract layout.home critical CSS into /_includes/critical-home.css
 gulp.task('styles:critical:home', function () {
-  return gulp.src('.tmp/dist/index.html')
+  return gulp.src('dist/index.html')
     .pipe(critical({
-      base: '.tmp',
+      base: 'dist',
       inline: false,
       css: ['src/_includes/style.css'],
       dimensions: pageDimensions,
@@ -165,7 +180,6 @@ gulp.task('styles:critical:home', function () {
       ignore: ['@font-face',/url\(/] // defer loading of webfonts and background images
     }))
 });
-
 
 // Function to properly reload your browser
 function reload(done) {
@@ -178,8 +192,14 @@ gulp.task('serve', (done) => {
   browserSync.init({
     // tunnel: true,
     // open: false,
-  
-    host: "starter-uikit3.dev"
+    // port: 4000, // change port to match default Jekyll
+    // ui: {
+    //   port: 4001
+    // },
+    // server: ['.tmp', 'dist'],
+    // server: 'dist',
+    proxy: "starter-uikit3.dev",
+    host: "192.168.1.144"
   });
   done();
 

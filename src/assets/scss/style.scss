@@ -1,9 +1,72 @@
 @charset "utf-8";
-
+/*===============================================
+/* Imports
+===============================================*/
 @import "vendor/uikit/uikit-mixins.scss";
 
+/* custom variables */
 @import "variable-overrides.scss";
+
+/* new uikit3 variables */
+@import "variable-uikit3.scss";
 
 @import "vendor/uikit/uikit.scss";
 
 @import "vendor/uikit/components/autocomplete.scss";
+
+/* custom upgrades to UiKit3 */
+@import "vendor/uikit/upgrade/uikit3.scss";
+
+/*===============================================
+/* Component: Base
+===============================================*/
+
+html.fonts-loaded {
+	font: $base-body-font-weight-loaded $base-body-font-size unquote("/") $base-body-line-height $base-body-font-family-loaded;
+}
+
+/* Links
+ ========================================================================== */
+
+
+
+/* Headings
+ ========================================================================== */
+html.fonts-loaded h1, 
+html.fonts-loaded h2 {
+	font-family: $base-heading-font-family-loaded;
+	font-weight: $base-heading-font-weight-loaded;
+}
+html.fonts-loaded h3, 
+html.fonts-loaded h4, 
+html.fonts-loaded h5, 
+html.fonts-loaded h6 {
+	font-family: $base-heading-font-family-secondary-loaded;
+	font-weight: $base-heading-font-weight-secondary-loaded;
+}
+html.fonts-loaded .uk-text-large {
+    font-weight: $text-large-font-weight-loaded;
+}
+
+html.fonts-loaded .uk-navbar-nav > li > a {
+	font-family: $navbar-nav-font-family-loaded;
+    font-weight: $navbar-nav-font-weight-loaded;
+}
+
+#masthead {
+	background-color: $header-background-color;
+	border-bottom: $header-border;
+	padding: 20px 0;
+}
+#masthead .yd-navbar-wrap  {
+	background-color: $header-background-color;
+	z-index: 9999;
+}
+#masthead .yd-navbar-wrap.uk-active  {
+	border-bottom: $header-border;
+	box-shadow: 0 2px 5px 0 rgba(30,30,30,0.09);
+}
+#site-footer {
+	background: $footer-background-color $footer-background-image $footer-background-repeat $footer-background-position;
+	padding: 30px 0;
+}

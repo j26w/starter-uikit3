@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+{% include header.html %}
 
-	{% include site__nav-main.html %}
 
-	{{ content }}
+{{ content }}
 
-</div>
+
+{% include footer.html %}
 
 {% include site__nav-offcanvas.html %}
