@@ -1,0 +1,53 @@
+// Name:            Inverse
+// Description:     Inverse component style for light or dark backgrounds
+//
+// Component:       `uk-light`
+//                  `uk-dark`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+$inverse-global-color-mode:                     light;
+
+$inverse-global-color:                          rgba($global-inverse-color, 70%/100.0%);
+$inverse-global-emphasis-color:                 $global-inverse-color;
+$inverse-global-muted-color:                    rgba($global-inverse-color, 50%/100.0%);
+$inverse-global-inverse-color:                  $global-color;
+
+$inverse-global-primary-background:             $global-inverse-color;
+$inverse-global-muted-background:               rgba($global-inverse-color, 10%/100.0%);
+
+$inverse-global-border:                         rgba($global-inverse-color, 20%/100.0%);
+
+
+/* ========================================================================
+   Component: Inverse
+ ========================================================================== */
+
+/*
+ * Implemented class depends on the general theme color
+ * `uk-light` is for light colors on dark backgrounds
+ * `uk-dark` is or dark colors on light backgrounds
+ */
+
+@if $inverse-global-color-mode == 'light' {
+	.uk-light {
+    	@include hook-inverse();
+	}
+}
+
+@if $inverse-global-color-mode == 'dark' {
+ 	.uk-dark {
+    	@include hook-inverse();
+    }
+
+}
+
+
+// Hooks
+// ========================================================================
+
+// @mixin hook-inverse(){}
