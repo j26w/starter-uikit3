@@ -24,24 +24,24 @@
 // Variables
 // ========================================================================
 
-$grid-gutter-horizontal:                        $global-gutter;
-$grid-gutter-vertical:                          $grid-gutter-horizontal;
-$grid-gutter-horizontal-l:                      $global-medium-gutter;
-$grid-gutter-vertical-l:                        $grid-gutter-horizontal-l;
+$grid-gutter-horizontal:                        $global-gutter !default;
+$grid-gutter-vertical:                          $grid-gutter-horizontal !default;
+$grid-gutter-horizontal-l:                      $global-medium-gutter !default;
+$grid-gutter-vertical-l:                        $grid-gutter-horizontal-l !default;
 
-$grid-small-gutter-horizontal:                  $global-small-gutter;
-$grid-small-gutter-vertical:                    $grid-small-gutter-horizontal;
+$grid-small-gutter-horizontal:                  $global-small-gutter !default;
+$grid-small-gutter-vertical:                    $grid-small-gutter-horizontal !default;
 
-$grid-medium-gutter-horizontal:                 $global-gutter;
-$grid-medium-gutter-vertical:                   $grid-medium-gutter-horizontal;
+$grid-medium-gutter-horizontal:                 $global-gutter !default;
+$grid-medium-gutter-vertical:                   $grid-medium-gutter-horizontal !default;
 
-$grid-large-gutter-horizontal:                  $global-medium-gutter;
-$grid-large-gutter-vertical:                    $grid-large-gutter-horizontal;
-$grid-large-gutter-horizontal-l:                $global-large-gutter;
-$grid-large-gutter-vertical-l:                  $grid-large-gutter-horizontal-l;
+$grid-large-gutter-horizontal:                  $global-medium-gutter !default;
+$grid-large-gutter-vertical:                    $grid-large-gutter-horizontal !default;
+$grid-large-gutter-horizontal-l:                $global-large-gutter !default;
+$grid-large-gutter-vertical-l:                  $grid-large-gutter-horizontal-l !default;
 
-$grid-divider-border-width:                     $global-border-width;
-$grid-divider-border:                           $global-border;
+$grid-divider-border-width:                     $global-border-width !default;
+$grid-divider-border:                           $global-border !default;
 
 
 /* ========================================================================

@@ -14,13 +14,13 @@
 // Variables
 // ========================================================================
 
-$overlay-padding-horizontal:                    $global-gutter;
-$overlay-padding-vertical:                      $global-gutter;
+$overlay-padding-horizontal:                    $global-gutter !default;
+$overlay-padding-vertical:                      $global-gutter !default;
 
-$overlay-default-background:                    rgba($global-background, 80%/100.0%);
+$overlay-default-background:                    rgba($global-background, 80%/100.0%) !default;
 
-$overlay-primary-background:                    rgba($global-secondary-background, 80%/100.0%);
-$overlay-primary-color-mode:                    light;
+$overlay-primary-background:                    rgba($global-secondary-background, 80%/100.0%) !default;
+$overlay-primary-color-mode:                    light !default;
 
 
 /* ========================================================================

@@ -19,30 +19,30 @@
 // Variables
 // ========================================================================
 
-$table-margin-vertical:                         $global-margin;
+$table-margin-vertical:                         $global-margin !default;
 
-$table-cell-padding-vertical:                   16px;
-$table-cell-padding-horizontal:                 12px;
+$table-cell-padding-vertical:                   16px !default;
+$table-cell-padding-horizontal:                 12px !default;
 
-$table-header-cell-font-size:                   $global-font-size;
-$table-header-cell-font-weight:                 bold;
-$table-header-cell-color:                       $global-color;
+$table-header-cell-font-size:                   $global-font-size !default;
+$table-header-cell-font-weight:                 bold !default;
+$table-header-cell-color:                       $global-color !default;
 
-$table-footer-font-size:                        $global-small-font-size;
+$table-footer-font-size:                        $global-small-font-size !default;
 
-$table-caption-font-size:                       $global-small-font-size;
-$table-caption-color:                           $global-muted-color;
+$table-caption-font-size:                       $global-small-font-size !default;
+$table-caption-color:                           $global-muted-color !default;
 
-$table-row-active-background:                   #ffd;
+$table-row-active-background:                   #ffd !default;
 
-$table-striped-row-background:                  $global-muted-background;
+$table-striped-row-background:                  $global-muted-background !default;
 
-$table-hover-row-background:                    $table-row-active-background;
+$table-hover-row-background:                    $table-row-active-background !default;
 
-$table-small-cell-padding-vertical:             10px;
-$table-small-cell-padding-horizontal:           12px;
+$table-small-cell-padding-vertical:             10px !default;
+$table-small-cell-padding-horizontal:           12px !default;
 
-$table-expand-min-width:                        300px;
+$table-expand-min-width:                        300px !default;
 
 
 /* ========================================================================

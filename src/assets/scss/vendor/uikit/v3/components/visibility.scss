@@ -26,28 +26,28 @@
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .uk-hidden\$s { display: none !important; }
+    .uk-hidden\@s { display: none !important; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-hidden\$m { display: none !important; }
+    .uk-hidden\@m { display: none !important; }
 
 }
 
 /* Desktop and bigger */
 @media (min-width: $breakpoint-large) {
 
-    .uk-hidden\$l { display: none !important; }
+    .uk-hidden\@l { display: none !important; }
 
 }
 
 /* Large screen and bigger */
 @media (min-width: $breakpoint-xlarge) {
 
-    .uk-hidden\$xl { display: none !important; }
+    .uk-hidden\@xl { display: none !important; }
 
 }
 
@@ -58,28 +58,28 @@
 /* Phone portrait and smaller */
 @media (max-width: $breakpoint-xsmall-max) {
 
-    .uk-visible\$s { display: none !important; }
+    .uk-visible\@s { display: none !important; }
 
 }
 
 /* Phone landscape and smaller */
 @media (max-width: $breakpoint-small-max) {
 
-    .uk-visible\$m { display: none !important; }
+    .uk-visible\@m { display: none !important; }
 
 }
 
 /* Tablet landscape and smaller */
 @media (max-width: $breakpoint-medium-max) {
 
-    .uk-visible\$l { display: none !important; }
+    .uk-visible\@l { display: none !important; }
 
 }
 
 /* Desktop and smaller */
 @media (max-width: $breakpoint-large-max) {
 
-    .uk-visible\$xl { display: none !important; }
+    .uk-visible\@xl { display: none !important; }
 
 }
 

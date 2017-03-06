@@ -219,13 +219,13 @@
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .uk-flex-first\$s {
+    .uk-flex-first\@s {
         -ms-flex-order: -1;
         -webkit-order: -1;
         order: -1;
     }
 
-    .uk-flex-last\$s {
+    .uk-flex-last\@s {
         -ms-flex-order: 99;
         -webkit-order: 99;
         order: 99;
@@ -236,13 +236,13 @@
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-flex-first\$m {
+    .uk-flex-first\@m {
         -ms-flex-order: -1;
         -webkit-order: -1;
         order: -1;
     }
 
-    .uk-flex-last\$m {
+    .uk-flex-last\@m {
         -ms-flex-order: 99;
         -webkit-order: 99;
         order: 99;
@@ -253,13 +253,13 @@
 /* Desktop and bigger */
 @media (min-width: $breakpoint-large) {
 
-    .uk-flex-first\$l {
+    .uk-flex-first\@l {
         -ms-flex-order: -1;
         -webkit-order: -1;
         order: -1;
     }
 
-    .uk-flex-last\$l {
+    .uk-flex-last\@l {
         -ms-flex-order: 99;
         -webkit-order: 99;
         order: 99;
@@ -270,13 +270,13 @@
 /* Large screen and bigger */
 @media (min-width: $breakpoint-xlarge) {
 
-    .uk-flex-first\$xl {
+    .uk-flex-first\@xl {
         -ms-flex-order: -1;
         -webkit-order: -1;
         order: -1;
     }
 
-    .uk-flex-last\$xl {
+    .uk-flex-last\@xl {
         -ms-flex-order: 99;
         -webkit-order: 99;
         order: 99;

@@ -1,40 +1,36 @@
-<header id="masthead">
-	<div class="yd-navbar-wrap" data-uk-sticky="{top:-400, animation: 'uk-animation-slide-top'">
-	  	<div class="uk-container uk-container-center">
-			
-			<div class="uk-visible-small">
-			    <div class="uk-navbar-container">
-			    	<nav class="uk-navbar">
-				        <div class="uk-navbar-content uk-navbar-flip uk-padding-remove">
-				            <a href="#offcanvas" class="uk-navbar-toggle uk-navbar-flip uk-visible-small" data-uk-offcanvas></a>
-				        </div>
-				        <div class="uk-navbar-content uk-navbar-center">
-				            <a class="uk-navbar-item uk-logo" href="{{ site.url}}{{ site.baseurl }}">
-				                <img src="{{ site.url}}{{ site.baseurl }}/assets/images/logo.svg" alt="{{ site.title }}" class="uk-responsive-height">
 
-				            </a>
-				        </div>
-				    </nav>
-			    </div>
-			</div>
+<header id="masthead-mobile" class="uk-hidden@m">
+    <div class="uk-navbar-container" uk-sticky="media: 640; top: 500; animation: uk-animation-slide-top">
+        <div class="uk-container ">
+		    <nav class="uk-navbar">
+		        <div class="uk-navbar-right">
+		            <a class="uk-navbar-toggle" href="#tm-mobile" uk-toggle>
+		                <div uk-navbar-toggle-icon></div>
+		            </a>
+		        </div>
+		        <div class="uk-navbar-center">
+		            <a class="uk-navbar-item uk-logo" href="{{ site.url}}{{ site.baseurl }}">
+		                 <img src="{{ site.url}}{{ site.baseurl }}/assets/images/logo.svg" alt="{{ site.title }}" class="uk-responsive-height"> </a>
+		        </div>
+		    </nav>
+		</div>
+	</div>
+    {% include site__nav-offcanvas.html %}
+</header><!-- /#masthead-mobile -->
 
-			<div class="uk-hidden-small">
-			    <div class="uk-navbar-container">
-		            <nav class="uk-navbar">
-		                <div class="uk-navbar-content uk-navbar-left uk-padding-remove">
-		                    <a href="" class="uk-logo uk-navbar-item">
-		                        <img src="{{ site.url}}{{ site.baseurl }}/assets/images/logo.svg" alt="{{ site.title }}" class="uk-responsive-height">
-
-		                        <!--<img src="{{ site.url}}{{ site.baseurl }}/assets/images/logo-inverted.svg" alt="{{ site.title }}" class="uk-responsive-height uk-logo-inverse">-->
-		                    </a>
-		                </div>
-		                <div class="uk-navbar-content uk-navbar-flip uk-padding-remove">
-		                	{% include site__nav-main.html %}
-		                </div>
-		            </nav>
-			    </div>
-			</div>
-	  	
-	  	</div>
-	 </div>
-</header><!-- /.masthead -->
+<header id="masthead" class="uk-visible@m">
+    <div class="uk-navbar-container" uk-sticky="media: 640; top: 500; animation: uk-animation-slide-top">
+        <div class="uk-container ">
+            <nav class="uk-navbar">
+                <div class="uk-navbar-left">
+                    <a href="{{ site.url}}{{ site.baseurl }}">
+                        <img src="{{ site.url}}{{ site.baseurl }}/assets/images/logo.svg" alt="{{ site.title }}" class="uk-responsive-height">
+                     </a>
+                </div>
+                <div class="uk-navbar-right">
+                    {% include site__nav-main.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</header><!-- /#masthead -->

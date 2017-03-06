@@ -10,21 +10,21 @@
 // Variables
 // ========================================================================
 
-$divider-margin-vertical:                       $global-margin;
+$divider-margin-vertical:                       $global-margin !default;
 
-$divider-icon-width:                            50px;
-$divider-icon-height:                           20px;
-$divider-icon-color:                            $global-border;
-$divider-icon-line-top:                         50%;
-$divider-icon-line-width:                       100%;
-$divider-icon-line-border-width:                $global-border-width;
-$divider-icon-line-border:                      $global-border;
+$divider-icon-width:                            50px !default;
+$divider-icon-height:                           20px !default;
+$divider-icon-color:                            $global-border !default;
+$divider-icon-line-top:                         50% !default;
+$divider-icon-line-width:                       100% !default;
+$divider-icon-line-border-width:                $global-border-width !default;
+$divider-icon-line-border:                      $global-border !default;
 
-$internal-divider-icon-image:                   "../../images/backgrounds/divider-icon.svg";
+$internal-divider-icon-image:                   "../../images/backgrounds/divider-icon.svg" !default;
 
-$divider-small-width:                           100px;
-$divider-small-border-width:                    $global-border-width;
-$divider-small-border:                          $global-border;
+$divider-small-width:                           100px !default;
+$divider-small-border-width:                    $global-border-width !default;
+$divider-small-border:                          $global-border !default;
 
 
 /* ========================================================================
@@ -118,9 +118,9 @@ $divider-small-border:                          $global-border;
 // Inverse
 // ========================================================================
 
-$inverse-divider-icon-color:                      $inverse-global-border;
-$inverse-divider-icon-line-border:                $inverse-global-border;
-$inverse-divider-small-border:                    $inverse-global-border;
+$inverse-divider-icon-color:                      $inverse-global-border !default;
+$inverse-divider-icon-line-border:                $inverse-global-border !default;
+$inverse-divider-small-border:                    $inverse-global-border !default;
 
 @mixin hook-inverse(){
 

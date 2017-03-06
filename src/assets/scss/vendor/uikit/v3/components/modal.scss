@@ -28,45 +28,45 @@
 // Variables
 // ========================================================================
 
-$modal-z-index:                                 $global-z-index + 10;
-$modal-background:                              rgba(0,0,0,0.6);
+$modal-z-index:                                 $global-z-index + 10 !default;
+$modal-background:                              rgba(0,0,0,0.6) !default;
 
-$modal-padding-horizontal:                      15px;
-$modal-padding-horizontal-s:                    $global-gutter;
-$modal-padding-horizontal-m:                    $global-medium-gutter;
+$modal-padding-horizontal:                      15px !default;
+$modal-padding-horizontal-s:                    $global-gutter !default;
+$modal-padding-horizontal-m:                    $global-medium-gutter !default;
 
-$modal-dialog-margin-vertical:                  50px;
-$modal-dialog-margin-vertical-xs:               15px;
-$modal-dialog-margin-horizontal:                $modal-dialog-margin-vertical-xs;
-$modal-dialog-width:                            600px;
-$modal-dialog-background:                       $global-background;
+$modal-dialog-margin-vertical:                  50px !default;
+$modal-dialog-margin-vertical-xs:               15px !default;
+$modal-dialog-margin-horizontal:                $modal-dialog-margin-vertical-xs !default;
+$modal-dialog-width:                            600px !default;
+$modal-dialog-background:                       $global-background !default;
 
-$modal-container-width:                         1200px;
+$modal-container-width:                         1200px !default;
 
-$modal-body-padding-horizontal:                 $global-gutter;
-$modal-body-padding-vertical:                   $global-gutter;
+$modal-body-padding-horizontal:                 $global-gutter !default;
+$modal-body-padding-vertical:                   $global-gutter !default;
 
-$modal-header-padding-horizontal:               $global-gutter;
-$modal-header-padding-vertical:                 ($modal-header-padding-horizontal / 2);
-$modal-header-background:                       $global-muted-background;
+$modal-header-padding-horizontal:               $global-gutter !default;
+$modal-header-padding-vertical:                 ($modal-header-padding-horizontal / 2) !default;
+$modal-header-background:                       $global-muted-background !default;
 
-$modal-footer-padding-horizontal:               $global-gutter;
-$modal-footer-padding-vertical:                 ($modal-footer-padding-horizontal / 2);
-$modal-footer-background:                       $global-muted-background;
+$modal-footer-padding-horizontal:               $global-gutter !default;
+$modal-footer-padding-vertical:                 ($modal-footer-padding-horizontal / 2) !default;
+$modal-footer-background:                       $global-muted-background !default;
 
-$modal-title-font-size:                         $global-xlarge-font-size;
-$modal-title-line-height:                       1.3;
+$modal-title-font-size:                         $global-xlarge-font-size !default;
+$modal-title-line-height:                       1.3 !default;
 
-$modal-close-position:                          $global-small-margin;
-$modal-close-padding:                           5px;
+$modal-close-position:                          $global-small-margin !default;
+$modal-close-padding:                           5px !default;
 
-$modal-close-outside-position:                  0;
-$modal-close-outside-translate:                 100%;
-$modal-close-outside-color:                     lighten($global-inverse-color, 20%);
-$modal-close-outside-hover-color:               $global-inverse-color;
+$modal-close-outside-position:                  0 !default;
+$modal-close-outside-translate:                 100% !default;
+$modal-close-outside-color:                     lighten($global-inverse-color, 20%) !default;
+$modal-close-outside-hover-color:               $global-inverse-color !default;
 
-$modal-caption-margin-top:                      $global-margin;
-$modal-caption-color:                           #fff;
+$modal-caption-margin-top:                      $global-margin !default;
+$modal-caption-color:                           #fff !default;
 
 
 /* ========================================================================

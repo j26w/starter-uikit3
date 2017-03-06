@@ -30,28 +30,29 @@
 // Variables
 // ========================================================================
 
-$panel-scrollable-height:                       170px;
-$panel-scrollable-padding:                      10px;
-$panel-scrollable-border-width:                 $global-border-width;
-$panel-scrollable-border:                       $global-border;
+$panel-scrollable-height:                       170px !default;
+$panel-scrollable-padding:                      10px !default;
+$panel-scrollable-border-width:                 $global-border-width !default;
+$panel-scrollable-border:                       $global-border !default;
 
-$height-small-height:                           150px;
-$height-medium-height:                          300px;
-$height-large-height:                           450px;
+$height-small-height:                           150px !default;
+$height-medium-height:                          300px !default;
+$height-large-height:                           450px !default;
 
-$border-rounded-border-radius:                  5px;
+$border-rounded-border-radius:                  5px !default;
 
-$box-shadow-duration:                           0.1s;
+$box-shadow-duration:                           0.1s !default;
 
-$dropcap-margin-right:                          10px;
-$dropcap-font-size:                             (($global-line-height * 3) * 1em);
+$dropcap-margin-right:                          10px !default;
+//fix// $dropcap-font-size:                             (($global-line-height * 3) * 1em);
+$dropcap-font-size:                             round(($global-line-height * 3)) !default;
 
-$logo-font-size:                                $global-large-font-size;
-$logo-font-family:                              $global-font-family;
-$logo-color:                                    $global-color;
-$logo-hover-color:                              $global-color;
+$logo-font-size:                                $global-large-font-size !default;
+$logo-font-family:                              $global-font-family !default;
+$logo-color:                                    $global-color !default;
+$logo-hover-color:                              $global-color !default;
 
-$dragover-box-shadow:                           0 0 20px rgba(100,100,100,0.3);
+$dragover-box-shadow:                           0 0 20px rgba(100,100,100,0.3) !default;
 
 
 /* ========================================================================
@@ -485,8 +486,8 @@ $dragover-box-shadow:                           0 0 20px rgba(100,100,100,0.3);
 // Inverse
 // ========================================================================
 
-$inverse-logo-color:                           $inverse-global-color;
-$inverse-logo-hover-color:                     $inverse-global-color;
+$inverse-logo-color:                           $inverse-global-color !default;
+$inverse-logo-hover-color:                     $inverse-global-color !default;
 
 @mixin hook-inverse(){
 

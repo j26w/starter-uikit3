@@ -1,18 +1,21 @@
 <footer role="contentinfo" id="site-footer">
-	<div class="uk-container uk-container-center">
-		<div class="uk-grid" data-uk-grid-margin>
+	<div class="uk-container">
+		
+		<div class="uk-grid uk-flex" uk-grid>
 		    
-            <div class="uk-width-medium-1-3 uk-push-2-3 uk-text-center-small ">
+            <div class="uk-width-1-3@m uk-text-center uk-text-left@m uk-flex-last@m">
                 <h3>Subscribe to Newsletter</h3>
-                <form class="uk-form" action="http://news.alliedfiber.com/t/r/s/ihtudyr/" method="post" id="subForm">
-                    <fieldset data-uk-margin>
-                        <input type="text" class="uk-form-large uk-margin-bottom" placeholder="youremail@example.com" id="fieldEmail" name="cm-ihtudyr-ihtudyr" required><br />
-                        <button class="uk-button uk-button-primary uk-button-large uk-margin-bottom" type="submit">Subscribe</button>
-                    </fieldset>
+                <form action="" method="post" id="subForm">
+                	<div class="uk-margin">
+                    	<input type="text" class="uk-input uk-form-large" placeholder="youremail@example.com" id="fieldEmail" name="" required>
+                    </div>
+                    <div class="uk-margin">
+                    	<button class="uk-button uk-button-primary uk-button-large uk-margin-bottom" type="submit">Subscribe</button>
+                    </div>
                 </form>
             </div>
 		    
-            <div class="uk-width-medium-1-3 uk-pull-1-3 uk-text-center-small ">
+            <div class="uk-width-1-3@m uk-text-center uk-text-left@m uk-flex-first@m">
 		      	<nav role="navigation">
   					<ul class="uk-list">
   					{% for item in site.data.navigation.footer %}
@@ -28,38 +31,29 @@
 				  </nav><!-- /.bottom-menu -->
 		    </div>
 
-		    <div class="uk-width-medium-1-3 uk-pull-1-3">
+		    <div class="uk-width-1-3@m uk-text-center uk-text-left@m">
 
 		    </div>
 		</div>
-		<div class="uk-grid" data-uk-grid-margin>
+		<div class="uk-grid" uk-grid>
 		    
-		    <div class="uk-width-medium-1-2 uk-push-1-2">
-			    <div class="uk-margin uk-text-center-small uk-text-right" uk-scrollspy-class="uk-animation-slide-right-small">
-				    <div class="uk-child-width-auto uk-flex-inline uk-grid-small" uk-grid>
-				        <div>
-				            <a href="https://twitter.com" class="uk-link-muted"><i class="uk-icon-twitter"></i></a>
-				        </div>
-				            <div>
-				            <a href="https://facebook.com" class="uk-link-muted"><i class="uk-icon-facebook"></i></a>
-				        </div>
-				            <div>
-				            <a href="https://plus.google.com" class="uk-link-muted"><i class="uk-icon-google-plus"></i></a>
-				        </div>
-				    </div>
-				</div>
+
+		    <div class="uk-width-1-2@m uk-flex-last@m uk-text-center uk-text-right@m">
+			    <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter"></a>
+				<a href="" class="uk-icon-button  uk-margin-small-right" uk-icon="icon: facebook"></a>
+				<a href="" class="uk-icon-button" uk-icon="icon: google-plus"></a>
 		    </div>
 		    
-		    <div class="uk-width-medium-1-2 uk-pull-1-2 uk-text-center-small">
+		    <div class="uk-width-1-2@m uk-text-center uk-text-left@m">
 		        <p class="copyright" data-uk-scrollspy="{cls:'uk-animation-slide-left-small', repeat: true}">&#169; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p> 
                 <p class="uk-text-small" data-uk-scrollspy="{cls:'uk-animation-slide-bottom-small', repeat: true}"><a href="">Terms &amp; Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">Site Map</a></p>
 		    </div>
 		  
 		 </div>
-		 <div class="uk-grid uk-grid-collapse uk-margin-top uk-margin-remove-bottom">
+		 <div class="uk-grid uk-grid-collapse uk-margin-top uk-margin-remove-bottom" uk-grid>
 		    
-		    <div class="uk-width-1-1 uk-text-center" data-uk-scrollspy="{cls:'uk-animation-slide-bottom-small', repeat: true}">
-                <a href="#" class="uk-button" data-uk-smooth-scroll>Scroll to Top</a>
+		    <div class="uk-width-1-1 uk-text-center">
+                <a href="#" uk-totop uk-scroll></a>
 		    </div>
 		  
 		 </div>

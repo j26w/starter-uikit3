@@ -11,15 +11,15 @@
 // Variables
 // ========================================================================
 
-$breadcrumb-item-font-size:                         $global-small-font-size;
-$breadcrumb-item-color:                             $global-muted-color;
-$breadcrumb-item-hover-color:                       $global-color;
-$breadcrumb-item-hover-text-decoration:             none;
-$breadcrumb-item-active-color:                      $global-color;
+$breadcrumb-item-font-size:                         $global-small-font-size !default;
+$breadcrumb-item-color:                             $global-muted-color !default;
+$breadcrumb-item-hover-color:                       $global-color !default;
+$breadcrumb-item-hover-text-decoration:             none !default;
+$breadcrumb-item-active-color:                      $global-color !default;
 
-$breadcrumb-divider:                                "/";
-$breadcrumb-divider-margin-horizontal:              20px;
-$breadcrumb-divider-color:                          $global-muted-color;
+$breadcrumb-divider:                                "/" !default;
+$breadcrumb-divider-margin-horizontal:              20px !default;
+$breadcrumb-divider-color:                          $global-muted-color !default;
 
 
 /* ========================================================================
@@ -110,10 +110,10 @@ $breadcrumb-divider-color:                          $global-muted-color;
 // Inverse
 // ========================================================================
 
-$inverse-breadcrumb-item-color:                $inverse-global-muted-color;
-$inverse-breadcrumb-item-hover-color:          $inverse-global-color;
-$inverse-breadcrumb-item-active-color:         $inverse-global-color;
-$inverse-breadcrumb-divider-color:             $inverse-global-muted-color;
+$inverse-breadcrumb-item-color:                $inverse-global-muted-color !default;
+$inverse-breadcrumb-item-hover-color:          $inverse-global-color !default;
+$inverse-breadcrumb-item-active-color:         $inverse-global-color !default;
+$inverse-breadcrumb-divider-color:             $inverse-global-muted-color !default;
 
 @mixin hook-inverse(){
 

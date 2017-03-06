@@ -16,21 +16,21 @@
 // Variables
 // ========================================================================
 
-$tile-padding-horizontal:                      $global-gutter;
-$tile-padding-vertical:                        $global-gutter;
+$tile-padding-horizontal:                      $global-gutter !default;
+$tile-padding-vertical:                        $global-gutter !default;
 
-$tile-padding-horizontal-l:                    $global-medium-gutter;
-$tile-padding-vertical-l:                      $global-medium-gutter;
+$tile-padding-horizontal-l:                    $global-medium-gutter !default;
+$tile-padding-vertical-l:                      $global-medium-gutter !default;
 
-$tile-default-background:                      $global-background;
+$tile-default-background:                      $global-background !default;
 
-$tile-muted-background:                        $global-muted-background;
+$tile-muted-background:                        $global-muted-background !default;
 
-$tile-primary-background:                      $global-primary-background;
-$tile-primary-color-mode:                      light;
+$tile-primary-background:                      $global-primary-background !default;
+$tile-primary-color-mode:                      light !default;
 
-$tile-secondary-background:                    $global-secondary-background;
-$tile-secondary-color-mode:                    light;
+$tile-secondary-background:                    $global-secondary-background !default;
+$tile-secondary-color-mode:                    light !default;
 
 
 /* ========================================================================

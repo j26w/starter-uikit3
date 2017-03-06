@@ -35,72 +35,72 @@
 // Variables
 // ========================================================================
 
-$form-height:                                   $global-control-height;
-$form-line-height:                              $form-height;
-$form-padding-horizontal:                       6px;
-$form-padding-vertical:                         4px;
+$form-height:                                   $global-control-height !default;
+$form-line-height:                              $form-height !default;
+$form-padding-horizontal:                       6px !default;
+$form-padding-vertical:                         4px !default;
 
-$form-background:                               $global-muted-background;
-$form-color:                                    $global-color;
+$form-background:                               $global-muted-background !default;
+$form-color:                                    $global-color !default;
 
-$form-focus-background:                         $global-muted-background;
-$form-focus-color:                              $global-color;
+$form-focus-background:                         $global-muted-background !default;
+$form-focus-color:                              $global-color !default;
 
-$form-disabled-background:                      $global-muted-background;
-$form-disabled-color:                           $global-muted-color;
+$form-disabled-background:                      $global-muted-background !default;
+$form-disabled-color:                           $global-muted-color !default;
 
-$form-placeholder-color:                        $global-muted-color;
+$form-placeholder-color:                        $global-muted-color !default;
 
-$form-small-height:                             $global-control-small-height;
-$form-large-height:                             $global-control-large-height;
-$form-small-line-height:                        $form-small-height;
-$form-large-line-height:                        $form-large-height;
-$form-small-font-size:                          $global-small-font-size;
-$form-large-font-size:                          $global-medium-font-size;
+$form-small-height:                             $global-control-small-height !default;
+$form-large-height:                             $global-control-large-height !default;
+$form-small-line-height:                        $form-small-height !default;
+$form-large-line-height:                        $form-large-height !default;
+$form-small-font-size:                          $global-small-font-size !default;
+$form-large-font-size:                          $global-medium-font-size !default;
 
-$form-danger-color:                             $global-danger-background;
-$form-success-color:                            $global-success-background;
+$form-danger-color:                             $global-danger-background !default;
+$form-success-color:                            $global-success-background !default;
 
-$form-width-xsmall:                             40px;
-$form-width-small:                              130px;
-$form-width-medium:                             200px;
-$form-width-large:                              500px;
+$form-width-xsmall:                             40px !default;
+$form-width-small:                              130px !default;
+$form-width-medium:                             200px !default;
+$form-width-large:                              500px !default;
 
-$form-select-padding-right:                     20px;
-$form-select-icon-color:                        $global-color;
-$form-select-disabled-icon-color:               $global-muted-color;
+$form-select-padding-right:                     20px !default;
+$form-select-icon-color:                        $global-color !default;
+$form-select-disabled-icon-color:               $global-muted-color !default;
 
-$form-radio-size:                               16px;
-$form-radio-margin-top:                         -4px;
-$form-radio-background:                         darken($global-muted-background, 5%);
+$form-radio-size:                               16px !default;
+$form-radio-margin-top:                         -4px !default;
+$form-radio-background:                         darken($global-muted-background, 5%) !default;
 
-$form-radio-checked-background:                 $global-primary-background;
-$form-radio-checked-icon-color:                 $global-inverse-color;
+$form-radio-checked-background:                 $global-primary-background !default;
+$form-radio-checked-icon-color:                 $global-inverse-color !default;
 
-$form-radio-checked-focus-background:           darken($global-primary-background, 10%);
+$form-radio-checked-focus-background:           darken($global-primary-background, 10%) !default;
 
-$form-radio-disabled-background:                $global-muted-background;
-$form-radio-disabled-icon-color:                $global-muted-color;
+$form-radio-disabled-background:                $global-muted-background !default;
+$form-radio-disabled-icon-color:                $global-muted-color !default;
 
-$form-legend-font-size:                         $global-large-font-size;
-$form-legend-line-height:                       1.4;
+$form-legend-font-size:                         $global-large-font-size !default;
+$form-legend-line-height:                       1.4 !default;
 
-$form-stacked-margin-bottom:                    $global-small-margin;
+$form-stacked-margin-bottom:                    $global-small-margin !default;
 
-$form-horizontal-label-width:                   200px;
-$form-horizontal-label-margin-top:              7px;
-$form-horizontal-controls-margin-left:          215px;
-$form-horizontal-controls-text-padding-top:     7px;
+$form-horizontal-label-width:                   200px !default;
+$form-horizontal-label-margin-top:              7px !default;
+$form-horizontal-controls-margin-left:          215px !default;
+$form-horizontal-controls-text-padding-top:     7px !default;
 
-$form-icon-width:                               30px;
-$form-icon-font-size:                           $global-font-size;
-$form-icon-color:                               $global-muted-color;
-$form-icon-hover-color:                         $global-color;
+$form-icon-width:                               30px !default;
+$form-icon-font-size:                           $global-font-size !default;
+$form-icon-color:                               $global-muted-color !default;
+$form-icon-hover-color:                         $global-color !default;
 
-$internal-form-select-image:                     "../../images/backgrounds/form-select.svg";
-$internal-form-radio-image:                      "../../images/backgrounds/form-radio.svg";
-$internal-form-checkbox-image:                   "../../images/backgrounds/form-checkbox.svg";
-$internal-form-checkbox-indeterminate-image:     "../../images/backgrounds/form-checkbox-indeterminate.svg";
+$internal-form-select-image:                     "../../images/backgrounds/form-select.svg" !default;
+$internal-form-radio-image:                      "../../images/backgrounds/form-radio.svg" !default;
+$internal-form-checkbox-image:                   "../../images/backgrounds/form-checkbox.svg" !default;
+$internal-form-checkbox-indeterminate-image:     "../../images/backgrounds/form-checkbox-indeterminate.svg" !default;
 
 
 /* ========================================================================
@@ -733,20 +733,20 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 // Inverse
 // ========================================================================
 
-$inverse-form-background:                      $inverse-global-muted-background;
-$inverse-form-color:                           $inverse-global-color;
-$inverse-form-focus-background:                $inverse-global-muted-background;
-$inverse-form-focus-color:                     $inverse-global-color;
-$inverse-form-placeholder-color:               $inverse-global-muted-color;
+$inverse-form-background:                      $inverse-global-muted-background !default;
+$inverse-form-color:                           $inverse-global-color !default;
+$inverse-form-focus-background:                $inverse-global-muted-background !default;
+$inverse-form-focus-color:                     $inverse-global-color !default;
+$inverse-form-placeholder-color:               $inverse-global-muted-color !default;
 
-$inverse-form-select-icon-color:               $inverse-global-color;
+$inverse-form-select-icon-color:               $inverse-global-color !default;
 
-$inverse-form-radio-background:                darken($inverse-global-muted-background, 5%);
+$inverse-form-radio-background:                darken($inverse-global-muted-background, 5%) !default;
 
-$inverse-form-radio-checked-background:        $inverse-global-primary-background;
-$inverse-form-radio-checked-icon-color:        $inverse-global-inverse-color;
+$inverse-form-radio-checked-background:        $inverse-global-primary-background !default;
+$inverse-form-radio-checked-icon-color:        $inverse-global-inverse-color !default;
 
-$inverse-form-radio-checked-focus-background:  darken($inverse-global-primary-background, 10%);
+$inverse-form-radio-checked-focus-background:  darken($inverse-global-primary-background, 10%) !default;
 
 @mixin hook-inverse(){
 

@@ -28,8 +28,8 @@
 // Variables
 // ========================================================================
 
-$position-small-margin:                                $global-small-gutter;
-$position-medium-margin:                               $global-gutter;
+$position-small-margin:                                $global-small-gutter !default;
+$position-medium-margin:                               $global-gutter !default;
 
 
 /* ========================================================================

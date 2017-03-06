@@ -1,17 +1,24 @@
-<div id="offcanvas" class="uk-offcanvas">
-    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-        <ul class="uk-nav uk-nav-offcanvas">
-	    {% for item in site.data.navigation.offcanvas %}
-	        
-	        {% assign class = nil %}
-	        {% if page.url contains item.url %}
-	        	{% assign class = 'uk-active' %}
-	        {% endif %}
-	        <li class="{{ class }}" >
-	        	<a href="{{ site.url}}{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-	        </li>
 
-	    {% endfor %}
-        </ul>
-    </div>
+<div id="tm-mobile" uk-offcanvas="flip: true; mode: push; overlay: true">
+	<div class="uk-offcanvas-bar">
+	    <div class="uk-child-width-1-1" uk-grid>
+	        <div>
+	            <div class="uk-panel">
+	                <ul class="uk-nav uk-nav-offcanvas">
+				    {% for item in site.data.navigation.offcanvas %}
+				        
+				        {% assign class = nil %}
+				        {% if page.url contains item.url %}
+				        	{% assign class = 'uk-active' %}
+				        {% endif %}
+				        <li class="{{ class }}" >
+				        	<a href="{{ site.url}}{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+				        </li>
+
+				    {% endfor %}
+			        </ul>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 </div>

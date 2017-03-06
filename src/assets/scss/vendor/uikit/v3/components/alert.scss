@@ -16,26 +16,26 @@
 // Variables
 // ========================================================================
 
-$alert-margin-vertical:                         $global-margin;
-$alert-padding:                                 $global-small-gutter;
-$alert-padding-right:                           $alert-padding + 14px;
-$alert-background:                              $global-muted-background;
-$alert-color:                                   $global-color;
+$alert-margin-vertical:                         $global-margin !default;
+$alert-padding:                                 $global-small-gutter !default;
+$alert-padding-right:                           $alert-padding + 14px !default;
+$alert-background:                              $global-muted-background !default;
+$alert-color:                                   $global-color !default;
 
-$alert-close-top:                               $alert-padding + 5px;
-$alert-close-right:                             $alert-padding;
+$alert-close-top:                               $alert-padding + 5px !default;
+$alert-close-right:                             $alert-padding !default;
 
-$alert-primary-background:                      tint($global-primary-background, 40%);
-$alert-primary-color:                           $global-primary-background;
+$alert-primary-background:                      tint($global-primary-background, 40%) !default;
+$alert-primary-color:                           $global-primary-background !default;
 
-$alert-success-background:                      tint($global-success-background, 40%);
-$alert-success-color:                           $global-success-background;
+$alert-success-background:                      tint($global-success-background, 40%) !default;
+$alert-success-color:                           $global-success-background !default;
 
-$alert-warning-background:                      tint($global-warning-background, 45%);
-$alert-warning-color:                           $global-warning-background;
+$alert-warning-background:                      tint($global-warning-background, 45%) !default;
+$alert-warning-color:                           $global-warning-background !default;
 
-$alert-danger-background:                       tint($global-danger-background, 40%);
-$alert-danger-color:                            $global-danger-background;
+$alert-danger-background:                       tint($global-danger-background, 40%) !default;
+$alert-danger-color:                            $global-danger-background !default;
 
 
 /* ========================================================================

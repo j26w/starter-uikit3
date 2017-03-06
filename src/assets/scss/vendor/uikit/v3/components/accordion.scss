@@ -12,12 +12,12 @@
 // Variables
 // ========================================================================
 
-$accordion-item-margin-top:                    $global-margin;
+$accordion-item-margin-top:                    $global-margin !default;
 
-$accordion-title-font-size:                    $global-medium-font-size;
-$accordion-title-line-height:                  1.4;
+$accordion-title-font-size:                    $global-medium-font-size !default;
+$accordion-title-line-height:                  1.4 !default;
 
-$accordion-content-margin-top:                 $global-margin;
+$accordion-content-margin-top:                 $global-margin !default;
 
 
 /* ========================================================================

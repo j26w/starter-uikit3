@@ -14,29 +14,30 @@
 // Variables
 // ========================================================================
 
-$list-margin-top:                               $global-small-margin;
+$list-margin-top:                               $global-small-margin !default;
 
-$list-nested-padding-left:                      $global-gutter;
+$list-nested-padding-left:                      $global-gutter !default;
 
-$list-divider-margin-top:                       $global-small-margin;
-$list-divider-border-width:                     $global-border-width;
-$list-divider-border:                           $global-border;
+$list-divider-margin-top:                       $global-small-margin !default;
+$list-divider-border-width:                     $global-border-width !default;
+$list-divider-border:                           $global-border !default;
 
-$list-striped-padding-vertical:                 $global-small-margin;
-$list-striped-padding-horizontal:               $global-small-margin;
-$list-striped-background:                       $global-muted-background;
+$list-striped-padding-vertical:                 $global-small-margin !default;
+$list-striped-padding-horizontal:               $global-small-margin !default;
+$list-striped-background:                       $global-muted-background !default;
 
-$list-bullet-width:                             ($global-line-height * 1em);
-$list-bullet-height:                            $list-bullet-width;
-$list-bullet-margin-right:                      $global-small-margin;
-$list-bullet-icon-color:                        $global-color;
+//fix// $list-bullet-width:                             ($global-line-height * 1em);
+$list-bullet-width:                             $global-line-height !default;
+$list-bullet-height:                            $list-bullet-width !default;
+$list-bullet-margin-right:                      $global-small-margin !default;
+$list-bullet-icon-color:                        $global-color !default;
 
-$list-large-margin-top:                         $global-margin;
-$list-large-divider-margin-top:                 $global-margin;
-$list-large-striped-padding-vertical:           $global-margin;
-$list-large-striped-padding-horizontal:         $global-small-margin;
+$list-large-margin-top:                         $global-margin !default;
+$list-large-divider-margin-top:                 $global-margin !default;
+$list-large-striped-padding-vertical:           $global-margin !default;
+$list-large-striped-padding-horizontal:         $global-small-margin !default;
 
-$internal-list-bullet-image:                    "../../images/backgrounds/list-bullet.svg";
+$internal-list-bullet-image:                    "../../images/backgrounds/list-bullet.svg" !default;
 
 
 /* ========================================================================
@@ -176,9 +177,9 @@ $internal-list-bullet-image:                    "../../images/backgrounds/list-b
 // Inverse
 // ========================================================================
 
-$inverse-list-divider-border:                     $inverse-global-border;
-$inverse-list-striped-background:                 $inverse-global-muted-background;
-$inverse-list-bullet-icon-color:                  $inverse-global-color;
+$inverse-list-divider-border:                     $inverse-global-border !default;
+$inverse-list-striped-background:                 $inverse-global-muted-background !default;
+$inverse-list-bullet-icon-color:                  $inverse-global-color !default;
 
 @mixin hook-inverse(){
 

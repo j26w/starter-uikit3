@@ -1,0 +1,222 @@
+// Global variables
+// ========================================================================
+
+//
+// Text
+//
+
+$global-color:                                  #444;
+$global-muted-color:                            #999;
+
+$global-link-color:                             #07D;
+$global-link-hover-color:                       #059;
+
+$global-contrast-color:                         #fff;
+
+$global-font-size:                              14px;
+$global-line-height:                            20px;
+
+//
+// Backgrounds & Borders
+//
+
+$global-background:                             #fff;
+$global-border:                                 #ddd;
+
+$global-primary-background:                     #00a8e6;
+$global-success-background:                     #8cc14c;
+$global-warning-background:                     #faa732;
+$global-danger-background:                      #da314b;
+
+//
+// Spacings
+//
+
+$global-margin:                                 15px;
+$global-margin-large:                           25px;
+$global-grid-gutter:                            25px;
+$global-grid-gutter-large:                      35px;
+$global-grid-gutter-xlarge:                     50px;
+
+//
+// Controls
+//
+
+$global-height:                                 30px;
+$global-height-mini:                            20px;
+$global-height-small:                           25px;
+$global-height-large:                           40px;
+
+//
+// Z-index
+//
+
+$global-z-index:                                1000;
+
+
+
+$color-primary-dark:							#002f5f;
+$color-primary-light:							#ddcd69;
+
+$header-background-color:						#fff;
+$header-border: 								1px solid #ededed;
+
+$footer-background-color:						#ccc;
+$footer-background-image:						;	
+$footer-background-repeat:						no-repeat;
+$footer-background-position:					center top;
+
+$breakpoint-small:                              30em; /* 480/16 */
+$breakpoint-medium:                             48em; /* 768/16 */
+$breakpoint-large:                              60em; /* 960/16 */
+$breakpoint-xlarge:                             76.25em; /* 1220/16 */
+$breakpoint-xxlarge:                            100em;  /* 1600/16 */
+
+$base-body-background: 							#fff;
+$base-body-font-family: 						"Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-body-font-family-loaded: 					"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-body-font-weight:                         normal;
+$base-body-font-weight-loaded:                  300;
+$base-body-font-size:                           16px;
+$base-body-line-height:                         1.5;
+$base-body-color:                               #444;
+$base-link-color:                               #07D;
+$base-link-text-decoration:                     none;
+$base-link-hover-color:                         #059;
+$base-link-hover-text-decoration:               underline;
+
+$base-heading-color: 							#444;
+$base-heading-font-family: 						"Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-heading-font-family-loaded: 				"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-heading-font-family-secondary: 			"Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-heading-font-family-secondary-loaded: 	"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-heading-font-weight: 						bold; 
+$base-heading-font-weight-loaded: 				600; 
+$base-heading-font-weight-secondary: 			bold;
+$base-heading-font-weight-secondary-loaded: 	600; 
+$base-heading-text-transform: 					none;
+$base-heading-text-transform-secondary: 		uppercase;
+$base-heading-letter-spacing:					0;
+$base-heading-line-height: 						1.2;
+$base-heading-margin-top: 						1.5625em; /* 25/16 */
+
+$base-h1-font-size:                             round(($base-body-font-size * 2.3125));
+$base-h1-line-height:                           $base-heading-line-height;
+$base-h2-font-size:                             round(($base-body-font-size * 1.9));
+$base-h2-line-height:                           $base-heading-line-height;
+$base-h3-font-size:                             round(($base-body-font-size * 1.3375));
+$base-h3-line-height:                           $base-heading-line-height;
+$base-h4-font-size:                             round(($base-body-font-size * 1.05));
+$base-h4-line-height:                           $base-heading-line-height;
+$base-h5-font-size:                             14px;
+$base-h5-line-height:                           $base-heading-line-height;
+$base-h6-font-size:                             round(($base-body-font-size * 0.85));
+$base-h6-line-height:                           $base-heading-line-height;
+
+$base-selection-background:                     #39f !default;
+$base-selection-color:                          #fff !default;
+
+$contrast-color:                                #fff !default;
+$contrast-inverted-color:                       #444 !default;
+
+$text-small-font-size:                          round(($base-body-font-size * 0.8));
+$text-small-line-height:                        $base-body-line-height;
+$text-large-font-size:                          round(($base-body-font-size * 1.2));
+$text-large-line-height:                        $base-body-line-height;
+$text-large-font-weight:                        $base-body-font-weight;
+$text-large-font-weight-loaded:                 $base-body-font-weight-loaded;
+
+/* Buttons
+ ========================================================================== */
+
+$button-height:                                  30px !default;
+$button-mini-height:                             20px !default;
+$button-small-height:                            25px !default;
+$button-large-height:                            40px !default;
+$button-line-height:                             30px !default;
+
+$button-mini-line-height:                        20px !default;
+$button-small-line-height:                       25px !default;
+$button-large-line-height:                       40px !default;
+
+$button-font-size:                               1rem !default;
+$button-mini-font-size:                          11px !default;
+$button-small-font-size:                         12px !default;
+$button-large-font-size:                         16px !default;
+
+$button-padding-horizontal:                      12px !default;
+$button-mini-padding-horizontal:                 6px !default;
+$button-small-padding-horizontal:                10px !default;
+$button-large-padding-horizontal:                15px !default;
+
+$button-background:                              #eee !default;
+$button-color:                                   #444 !default;
+$button-hover-background:                        #f5f5f5 !default;
+$button-hover-color:                             #444 !default;
+$button-active-background:                       #ddd !default;
+$button-active-color:                            #444 !default;
+
+$button-primary-background:                      #00a8e6 !default;
+$button-primary-color:                           #fff !default;
+$button-primary-hover-background:                #35b3ee !default;
+$button-primary-hover-color:                     #fff !default;
+$button-primary-active-background:               #0091ca !default;
+$button-primary-active-color:                    #fff !default;
+
+$button-success-background:                      #8cc14c !default;
+$button-success-color:                           #fff !default;
+$button-success-hover-background:                #8ec73b !default;
+$button-success-hover-color:                     #fff !default;
+$button-success-active-background:               #72ae41 !default;
+$button-success-active-color:                    #fff !default;
+
+$button-danger-background:                       #da314b !default;
+$button-danger-color:                            #fff !default;
+$button-danger-hover-background:                 #e4354f !default;
+$button-danger-hover-color:                      #fff !default;
+$button-danger-active-background:                #c91032 !default;
+$button-danger-active-color:                     #fff !default;
+
+$button-disabled-background:                     #f5f5f5 !default;
+$button-disabled-color:                          #999 !default;
+
+$button-link-color:                              #07D !default;
+$button-link-hover-color:                        #059 !default;
+$button-link-hover-text-decoration:              underline !default;
+
+@mixin hook-button() {
+	border-radius: 4px;
+}
+
+/* Navigation
+ ========================================================================== */
+
+$navbar-background: 							 #fff;
+$navbar-nav-height:                              60px;
+$navbar-nav-line-height:                         $navbar-nav-height;
+$navbar-nav-color:                               #B4B5BA;
+$navbar-nav-font-size:                           round(($base-body-font-size * 0.9));
+$navbar-nav-font-weight:                         $base-body-font-weight;
+$navbar-nav-font-weight-loaded:                  $base-body-font-weight-loaded;
+$navbar-nav-font-family:                         $base-body-font-family;
+$navbar-nav-font-family-loaded:                  $base-body-font-family-loaded;
+$navbar-nav-hover-background:                    transparent;
+$navbar-nav-hover-color:                         #6c6d74;
+$navbar-nav-onclick-background:                  transparent;
+$navbar-nav-onclick-color:                       #2D2E33;
+$navbar-nav-active-background:                   transparent;
+$navbar-nav-active-color:                        #2D2E33;
+
+@mixin hook-navbar-nav() {
+	text-transform: uppercase;
+}
+/* Utility
+ ========================================================================== */
+
+$utility-margin:                                15px;
+$utility-margin-small:                          5px;
+$utility-margin-large:                          50px;
+
+
+
+

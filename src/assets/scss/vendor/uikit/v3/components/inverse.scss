@@ -10,17 +10,17 @@
 // Variables
 // ========================================================================
 
-$inverse-global-color-mode:                     light;
+$inverse-global-color-mode:                     light !default;
 
-$inverse-global-color:                          rgba($global-inverse-color, 70%/100.0%);
-$inverse-global-emphasis-color:                 $global-inverse-color;
-$inverse-global-muted-color:                    rgba($global-inverse-color, 50%/100.0%);
-$inverse-global-inverse-color:                  $global-color;
+$inverse-global-color:                          rgba($global-inverse-color, 70%/100.0%) !default;
+$inverse-global-emphasis-color:                 $global-inverse-color !default;
+$inverse-global-muted-color:                    rgba($global-inverse-color, 50%/100.0%) !default;
+$inverse-global-inverse-color:                  $global-color !default;
 
-$inverse-global-primary-background:             $global-inverse-color;
-$inverse-global-muted-background:               rgba($global-inverse-color, 10%/100.0%);
+$inverse-global-primary-background:             $global-inverse-color !default;
+$inverse-global-muted-background:               rgba($global-inverse-color, 10%/100.0%) !default;
 
-$inverse-global-border:                         rgba($global-inverse-color, 20%/100.0%);
+$inverse-global-border:                         rgba($global-inverse-color, 20%/100.0%) !default;
 
 
 /* ========================================================================

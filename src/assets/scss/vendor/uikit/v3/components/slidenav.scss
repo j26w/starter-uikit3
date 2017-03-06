@@ -14,12 +14,12 @@
 // Variables
 // ========================================================================
 
-$slidenav-padding:                              5px;
-$slidenav-color:                                fadeout($global-color, 40%);
+$slidenav-padding:                              5px !default;
+$slidenav-color:                                fadeout($global-color, 40%) !default;
 
-$slidenav-hover-color:                          fadeout($global-color, 20%);
+$slidenav-hover-color:                          fadeout($global-color, 20%) !default;
 
-$slidenav-active-color:                         fadeout($global-color, 10%);
+$slidenav-active-color:                         fadeout($global-color, 10%) !default;
 
 
 /* ========================================================================
@@ -99,9 +99,9 @@ $slidenav-active-color:                         fadeout($global-color, 10%);
 // Inverse
 // ========================================================================
 
-$inverse-slidenav-color:                       fadeout($inverse-global-color, 40%);
-$inverse-slidenav-hover-color:                 fadeout($inverse-global-color, 20%);
-$inverse-slidenav-active-color:                fadeout($inverse-global-color, 10%);
+$inverse-slidenav-color:                       fadeout($inverse-global-color, 40%) !default;
+$inverse-slidenav-hover-color:                 fadeout($inverse-global-color, 20%) !default;
+$inverse-slidenav-active-color:                fadeout($inverse-global-color, 10%) !default;
 
 @mixin hook-inverse(){
 

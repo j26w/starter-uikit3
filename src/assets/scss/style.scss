@@ -62,7 +62,7 @@ html.fonts-loaded .uk-navbar-nav > li > a {
 	background-color: $header-background-color;
 	z-index: 9999;
 }
-#masthead .yd-navbar-wrap.uk-active  {
+.uk-navbar-container.uk-sticky.uk-sticky-fixed.uk-active {
 	border-bottom: $header-border;
 	box-shadow: 0 2px 5px 0 rgba(30,30,30,0.09);
 }
