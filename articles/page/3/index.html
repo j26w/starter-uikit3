@@ -254,38 +254,98 @@
 </head>
 <body class="yd-wrap">
   
-  <header id="masthead">
-	<div class="yd-navbar-wrap" data-uk-sticky="{top:-400, animation: 'uk-animation-slide-top'">
-	  	<div class="uk-container uk-container-center">
-			
-			<div class="uk-visible-small">
-			    <div class="uk-navbar-container">
-			    	<nav class="uk-navbar">
-				        <div class="uk-navbar-content uk-navbar-flip uk-padding-remove">
-				            <a href="#offcanvas" class="uk-navbar-toggle uk-navbar-flip uk-visible-small" data-uk-offcanvas></a>
-				        </div>
-				        <div class="uk-navbar-content uk-navbar-center">
-				            <a class="uk-navbar-item uk-logo" href="http://starter-uikit3.dev">
-				                <img src="http://starter-uikit3.dev/assets/images/logo.svg" alt="Starter Uikit3" class="uk-responsive-height">
+  
+<header id="masthead-mobile" class="uk-hidden@m">
+    <div class="uk-navbar-container" uk-sticky="media: 640; top: 500; animation: uk-animation-slide-top">
+        <div class="uk-container ">
+		    <nav class="uk-navbar">
+		        <div class="uk-navbar-right">
+		            <a class="uk-navbar-toggle" href="#tm-mobile" uk-toggle>
+		                <div uk-navbar-toggle-icon></div>
+		            </a>
+		        </div>
+		        <div class="uk-navbar-center">
+		            <a class="uk-navbar-item uk-logo" href="http://starter-uikit3.dev">
+		                 <img src="http://starter-uikit3.dev/assets/images/logo.svg" alt="Starter Uikit3" class="uk-responsive-height"> </a>
+		        </div>
+		    </nav>
+		</div>
+	</div>
+    
+<div id="tm-mobile" uk-offcanvas="flip: true; mode: push; overlay: true">
+	<div class="uk-offcanvas-bar">
+	    <div class="uk-child-width-1-1" uk-grid>
+	        <div>
+	            <div class="uk-panel">
+	                <ul class="uk-nav uk-nav-offcanvas">
+				    
+				        
+				        
+				        
+				        <li class="uk-active" >
+				        	<a href="http://starter-uikit3.dev/">Home</a>
+				        </li>
 
-				            </a>
-				        </div>
-				    </nav>
-			    </div>
-			</div>
+				    
+				        
+				        
+				        
+				        <li class="" >
+				        	<a href="http://starter-uikit3.dev/about/">About Us</a>
+				        </li>
 
-			<div class="uk-hidden-small">
-			    <div class="uk-navbar-container">
-		            <nav class="uk-navbar">
-		                <div class="uk-navbar-content uk-navbar-left uk-padding-remove">
-		                    <a href="" class="uk-logo uk-navbar-item">
-		                        <img src="http://starter-uikit3.dev/assets/images/logo.svg" alt="Starter Uikit3" class="uk-responsive-height">
+				    
+				        
+				        
+				        
+				        <li class="" >
+				        	<a href="http://starter-uikit3.dev/work/">Work Portfolio</a>
+				        </li>
 
-		                        <!--<img src="http://starter-uikit3.dev/assets/images/logo-inverted.svg" alt="Starter Uikit3" class="uk-responsive-height uk-logo-inverse">-->
-		                    </a>
-		                </div>
-		                <div class="uk-navbar-content uk-navbar-flip uk-padding-remove">
-		                	<ul class="uk-navbar-nav">
+				    
+				        
+				        
+				        
+				        <li class="uk-active" >
+				        	<a href="http://starter-uikit3.dev/articles/">News and Articles</a>
+				        </li>
+
+				    
+				        
+				        
+				        
+				        <li class="" >
+				        	<a href="http://starter-uikit3.dev/contact/">Contact Us</a>
+				        </li>
+
+				    
+				        
+				        
+				        
+				        <li class="" >
+				        	<a href="http://starter-uikit3.dev/login/">Login</a>
+				        </li>
+
+				    
+			        </ul>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+</header><!-- /#masthead-mobile -->
+
+<header id="masthead" class="uk-visible@m">
+    <div class="uk-navbar-container" uk-sticky="media: 640; top: 500; animation: uk-animation-slide-top">
+        <div class="uk-container ">
+            <nav class="uk-navbar">
+                <div class="uk-navbar-left">
+                    <a href="http://starter-uikit3.dev">
+                        <img src="http://starter-uikit3.dev/assets/images/logo.svg" alt="Starter Uikit3" class="uk-responsive-height">
+                     </a>
+                </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav">
 
        	
    	
@@ -336,14 +396,11 @@
 
 
 </ul>
-		                </div>
-		            </nav>
-			    </div>
-			</div>
-	  	
-	  	</div>
-	 </div>
-</header><!-- /.masthead -->
+                </div>
+            </nav>
+        </div>
+    </div>
+</header><!-- /#masthead -->
 
 
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
@@ -484,20 +541,23 @@
 
 
 <footer role="contentinfo" id="site-footer">
-	<div class="uk-container uk-container-center">
-		<div class="uk-grid" data-uk-grid-margin>
+	<div class="uk-container">
+		
+		<div class="uk-grid uk-flex" uk-grid>
 		    
-            <div class="uk-width-medium-1-3 uk-push-2-3 uk-text-center-small ">
+            <div class="uk-width-1-3@m uk-text-center uk-text-left@m uk-flex-last@m">
                 <h3>Subscribe to Newsletter</h3>
-                <form class="uk-form" action="http://news.alliedfiber.com/t/r/s/ihtudyr/" method="post" id="subForm">
-                    <fieldset data-uk-margin>
-                        <input type="text" class="uk-form-large uk-margin-bottom" placeholder="youremail@example.com" id="fieldEmail" name="cm-ihtudyr-ihtudyr" required><br />
-                        <button class="uk-button uk-button-primary uk-button-large uk-margin-bottom" type="submit">Subscribe</button>
-                    </fieldset>
+                <form action="" method="post" id="subForm">
+                	<div class="uk-margin">
+                    	<input type="text" class="uk-input uk-form-large" placeholder="youremail@example.com" id="fieldEmail" name="" required>
+                    </div>
+                    <div class="uk-margin">
+                    	<button class="uk-button uk-button-primary uk-button-large uk-margin-bottom" type="submit">Subscribe</button>
+                    </div>
                 </form>
             </div>
 		    
-            <div class="uk-width-medium-1-3 uk-pull-1-3 uk-text-center-small ">
+            <div class="uk-width-1-3@m uk-text-center uk-text-left@m uk-flex-first@m">
 		      	<nav role="navigation">
   					<ul class="uk-list">
   					
@@ -541,98 +601,96 @@
 				  </nav><!-- /.bottom-menu -->
 		    </div>
 
-		    <div class="uk-width-medium-1-3 uk-pull-1-3">
+		    <div class="uk-width-1-3@m uk-text-center uk-text-left@m">
 
 		    </div>
 		</div>
-		<div class="uk-grid" data-uk-grid-margin>
+		<div class="uk-grid" uk-grid>
 		    
-		    <div class="uk-width-medium-1-2 uk-push-1-2">
-			    <div class="uk-margin uk-text-center-small uk-text-right" uk-scrollspy-class="uk-animation-slide-right-small">
-				    <div class="uk-child-width-auto uk-flex-inline uk-grid-small" uk-grid>
-				        <div>
-				            <a href="https://twitter.com" class="uk-link-muted"><i class="uk-icon-twitter"></i></a>
-				        </div>
-				            <div>
-				            <a href="https://facebook.com" class="uk-link-muted"><i class="uk-icon-facebook"></i></a>
-				        </div>
-				            <div>
-				            <a href="https://plus.google.com" class="uk-link-muted"><i class="uk-icon-google-plus"></i></a>
-				        </div>
-				    </div>
-				</div>
+
+		    <div class="uk-width-1-2@m uk-flex-last@m uk-text-center uk-text-right@m">
+			    <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter"></a>
+				<a href="" class="uk-icon-button  uk-margin-small-right" uk-icon="icon: facebook"></a>
+				<a href="" class="uk-icon-button" uk-icon="icon: google-plus"></a>
 		    </div>
 		    
-		    <div class="uk-width-medium-1-2 uk-pull-1-2 uk-text-center-small">
+		    <div class="uk-width-1-2@m uk-text-center uk-text-left@m">
 		        <p class="copyright" data-uk-scrollspy="{cls:'uk-animation-slide-left-small', repeat: true}">&#169; 2017 Starter Uikit3. All rights reserved.</p> 
                 <p class="uk-text-small" data-uk-scrollspy="{cls:'uk-animation-slide-bottom-small', repeat: true}"><a href="">Terms &amp; Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">Site Map</a></p>
 		    </div>
 		  
 		 </div>
-		 <div class="uk-grid uk-grid-collapse uk-margin-top uk-margin-remove-bottom">
+		 <div class="uk-grid uk-grid-collapse uk-margin-top uk-margin-remove-bottom" uk-grid>
 		    
-		    <div class="uk-width-1-1 uk-text-center" data-uk-scrollspy="{cls:'uk-animation-slide-bottom-small', repeat: true}">
-                <a href="#" class="uk-button" data-uk-smooth-scroll>Scroll to Top</a>
+		    <div class="uk-width-1-1 uk-text-center">
+                <a href="#" uk-totop uk-scroll></a>
 		    </div>
 		  
 		 </div>
 	</div>
 </footer>
 
-<div id="offcanvas" class="uk-offcanvas">
-    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-        <ul class="uk-nav uk-nav-offcanvas">
-	    
-	        
-	        
-	        
-	        <li class="uk-active" >
-	        	<a href="http://starter-uikit3.dev/">Home</a>
-	        </li>
 
-	    
-	        
-	        
-	        
-	        <li class="" >
-	        	<a href="http://starter-uikit3.dev/about/">About Us</a>
-	        </li>
+<div id="tm-mobile" uk-offcanvas="flip: true; mode: push; overlay: true">
+	<div class="uk-offcanvas-bar">
+	    <div class="uk-child-width-1-1" uk-grid>
+	        <div>
+	            <div class="uk-panel">
+	                <ul class="uk-nav uk-nav-offcanvas">
+				    
+				        
+				        
+				        
+				        <li class="uk-active" >
+				        	<a href="http://starter-uikit3.dev/">Home</a>
+				        </li>
 
-	    
-	        
-	        
-	        
-	        <li class="" >
-	        	<a href="http://starter-uikit3.dev/work/">Work Portfolio</a>
-	        </li>
+				    
+				        
+				        
+				        
+				        <li class="" >
+				        	<a href="http://starter-uikit3.dev/about/">About Us</a>
+				        </li>
 
-	    
-	        
-	        
-	        
-	        <li class="uk-active" >
-	        	<a href="http://starter-uikit3.dev/articles/">News and Articles</a>
-	        </li>
+				    
+				        
+				        
+				        
+				        <li class="" >
+				        	<a href="http://starter-uikit3.dev/work/">Work Portfolio</a>
+				        </li>
 
-	    
-	        
-	        
-	        
-	        <li class="" >
-	        	<a href="http://starter-uikit3.dev/contact/">Contact Us</a>
-	        </li>
+				    
+				        
+				        
+				        
+				        <li class="uk-active" >
+				        	<a href="http://starter-uikit3.dev/articles/">News and Articles</a>
+				        </li>
 
-	    
-	        
-	        
-	        
-	        <li class="" >
-	        	<a href="http://starter-uikit3.dev/login/">Login</a>
-	        </li>
+				    
+				        
+				        
+				        
+				        <li class="" >
+				        	<a href="http://starter-uikit3.dev/contact/">Contact Us</a>
+				        </li>
 
-	    
-        </ul>
-    </div>
+				    
+				        
+				        
+				        
+				        <li class="" >
+				        	<a href="http://starter-uikit3.dev/login/">Login</a>
+				        </li>
+
+				    
+			        </ul>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 </div>
 
 
