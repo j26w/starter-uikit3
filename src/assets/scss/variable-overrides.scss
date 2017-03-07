@@ -59,7 +59,7 @@ $color-primary-dark:							#002f5f;
 $color-primary-light:							#ddcd69;
 
 $header-background-color:						#fff;
-$header-border: 								1px solid #ededed;
+$header-border: 								none;
 
 $footer-background-color:						#ccc;
 $footer-background-image:						;	
@@ -217,6 +217,12 @@ $utility-margin:                                15px;
 $utility-margin-small:                          5px;
 $utility-margin-large:                          50px;
 
+/* Card
+ ========================================================================== */
 
+$card-default-background: #fff;
 
+@mixin hook-card-default() {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
 

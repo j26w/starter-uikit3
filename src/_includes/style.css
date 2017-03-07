@@ -15,6 +15,8 @@
  ========================================================================== */
 /* Utility
  ========================================================================== */
+/* Card
+ ========================================================================== */
 /* new uikit3 variables */
 /* ========================================================================
    Component: Inverse
@@ -2362,14 +2364,15 @@ select.uk-form-width-xsmall {
  * Note: Header and Footer are only implemented for the default style
  */
 .uk-card-default {
-  background: #f8f8f8;
-  color: #444; }
+  background: #fff;
+  color: #444;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); }
 
 .uk-card-default .uk-card-title {
   color: #333; }
 
 .uk-card-default.uk-card-hover:hover {
-  background-color: #ebebeb; }
+  background-color: #f2f2f2; }
 
 /*
  * Primary
@@ -7954,7 +7957,7 @@ html.fonts-loaded .uk-navbar-nav > li > a {
 
 #masthead {
   background-color: #fff;
-  border-bottom: 1px solid #ededed;
+  border-bottom: none;
   padding: 20px 0; }
 
 #masthead .yd-navbar-wrap {
@@ -7962,7 +7965,7 @@ html.fonts-loaded .uk-navbar-nav > li > a {
   z-index: 9999; }
 
 .uk-navbar-container.uk-sticky.uk-sticky-fixed.uk-active {
-  border-bottom: 1px solid #ededed;
+  border-bottom: none;
   box-shadow: 0 2px 5px 0 rgba(30, 30, 30, 0.09); }
 
 #site-footer {
