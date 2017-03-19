@@ -4,7 +4,7 @@
 ===============================================*/
 @import "vendor/uikit/v3/uikit-mixins.scss";
 
-/* custom variables */
+/* custom variables and mixins */
 @import "variable-overrides.scss";
 
 /* new uikit3 variables */
@@ -22,8 +22,11 @@
 ===============================================*/
 
 html.fonts-loaded {
-	font: $base-body-font-weight-loaded $base-body-font-size unquote("/") $base-body-line-height $base-body-font-family-loaded;
+    /* 1 */
+    font-family: $base-body-font-family-loaded;
+    font-weight: $base-body-font-weight-loaded;
 }
+
 
 /* Links
  ========================================================================== */
@@ -69,4 +72,19 @@ html.fonts-loaded .uk-navbar-nav > li > a {
 #site-footer {
 	background: $footer-background-color $footer-background-image $footer-background-repeat $footer-background-position;
 	padding: 30px 0;
+}
+.yd-page-lead {
+  position: relative;
+}
+.yd-page-lead:before {
+content: '';
+position: absolute;
+bottom: -1px;
+left: 0;
+right: 0;
+top: 0;
+z-index: 3;
+pointer-events: none;
+background: url(/assets/images/blobs-bottom.svg) center bottom no-repeat;
+background-size: 120% 20%;
 }

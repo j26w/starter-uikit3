@@ -4,15 +4,14 @@ layout: default
 
 {% include header.html %}
 
-<div class="yd-page-lead uk-background-bottom-left uk-background-norepeat uk-background-blend-overlay" style="background-color:#abe1fa;background-image: url(/assets/images/bg-color-landscape.png);">
+<div class="yd-page-lead uk-background-bottom-center uk-background-norepeat uk-background-blend-overlay" style="background-color:#abe1fa;background-image: url(/assets/images/bg-color-landscape.png);">
     <div class="yd-page-lead-content uk-container uk-flex uk-flex-middle" style="height: 50vh;">
 	    
 	    <div class="uk-width-1-2@m">
 	        <h1 class="uk-heading-large uk-animation-slide-left-medium">Sample Heading</h1>
 	        <p class="uk-text-large uk-animation-slide-bottom-small">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
 	        <p class="uk-animation-slide-bottom-small">
-	            <a class="uk-button uk-button-primary uk-button-large" href="#">Button</a>
-	            <a class="uk-button uk-button-large" href="#">Button</a>
+	            <a class="uk-button uk-button-default uk-button-large" href="#">Button</a>
 	        </p>
 	    </div>
 
@@ -24,7 +23,14 @@ layout: default
 
 	<div class="uk-grid uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
 		<div>
-	        <div class="uk-card uk-card-default uk-card-body">Item</div>
+	        <div class="uk-card uk-card-default">
+	        	<div class="uk-card-media-top uk-margin-large-left uk-margin-large-right ">
+			        <img class="uk-margin-top" src="{{ site.url }}{{ site.baseurl }}/assets/images/icon-business-window.svg" alt="">
+			    </div>
+			    <div class="uk-card-body">
+			    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            	</div>
+	        </div>
 	    </div>
 	    <div>
 	        <div class="uk-card uk-card-default uk-card-body">Item</div>
