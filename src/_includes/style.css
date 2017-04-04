@@ -2,6 +2,7 @@
 /*===============================================
 /* Imports
 ===============================================*/
+/* uikit mixins */
 /* custom variables and mixins */
 /* 25/16 */
 /* Buttons
@@ -47,15 +48,7 @@ $navbar-dropbar-z-index:                        $global-z-index + 20 !default;
 /* Item */
 /* Card
  ========================================================================== */
-/* new uikit3 variables */
-/* ========================================================================
-   Component: Inverse
- ========================================================================== */
-/*
- * Implemented class depends on the general theme color
- * `uk-light` is for light colors on dark backgrounds
- * `uk-dark` is or dark colors on light backgrounds
- */
+/* uikit */
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -587,7 +580,7 @@ a.uk-link-reset:focus,
   display: inline-block;
   /* 2 */
   position: relative;
-  top: "calc(-0.1 * 1em)";
+  top: calc(-0.1 * 1em);
   vertical-align: middle;
   /* 3 */
   height: 0.9em;
@@ -619,7 +612,7 @@ a.uk-link-reset:focus,
   content: "";
   /* 1 */
   position: absolute;
-  top: "calc(50% - (1px / 2))";
+  top: calc(50% - (1px / 2));
   /* 2 */
   width: 2000px;
   /* 3 */
@@ -655,7 +648,7 @@ a.uk-link-reset:focus,
 .uk-divider-icon {
   position: relative;
   height: 20px;
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/divider-icon.svg")', 'escape("#000")', 'escape("#ddd")', "g");
+  @svg-fill ($internal-divider-icon-image, "#000", $divider-icon-color);
   background-repeat: no-repeat;
   background-position: 50% 50%; }
 
@@ -664,15 +657,15 @@ a.uk-link-reset:focus,
   content: "";
   position: absolute;
   top: 50%;
-  max-width: "calc(50% - (50px / 2))";
+  max-width: calc(50% - (50px / 2));
   border-bottom: 1px solid #ddd; }
 
 .uk-divider-icon::before {
-  right: "calc(50% + (50px / 2))";
+  right: calc(50% + (50px / 2));
   width: 100%; }
 
 .uk-divider-icon::after {
-  left: "calc(50% + (50px / 2))";
+  left: calc(50% + (50px / 2));
   width: 100%; }
 
 /* Small
@@ -757,16 +750,16 @@ a.uk-link-reset:focus,
  */
 .uk-list-bullet > li {
   position: relative;
-  padding-left: "calc(1.5 + 10px)"; }
+  padding-left: calc(1.5em + 10px); }
 
 .uk-list-bullet > li::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 1.5;
-  height: 1.5;
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/list-bullet.svg")', 'escape("#000")', 'escape("#444")', "g");
+  width: 1.5em;
+  height: 1.5em;
+  @svg-fill ($internal-list-bullet-image, "#000", $list-bullet-icon-color);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   float: left; }
@@ -1293,7 +1286,7 @@ select.uk-form-width-xsmall {
   -moz-appearance: none;
   /* 2 */
   padding-right: 20px;
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/form-select.svg")', 'escape("#000")', 'escape("#444")', "g");
+  @svg-fill ($internal-form-select-image, "#000", $form-select-icon-color);
   background-repeat: no-repeat;
   background-position: 100% 50%; }
 
@@ -1305,7 +1298,7 @@ select.uk-form-width-xsmall {
  * Disabled
  */
 .uk-select:not([multiple]):not([size]):disabled {
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/form-select.svg")', 'escape("#000")', 'escape("#999")', "g"); }
+  @svg-fill ($internal-form-select-image, "#000", $form-select-disabled-icon-color); }
 
 /* Radio and checkbox
  * Note: Only works in Chrome, Safari, Opera and Edge
@@ -1363,13 +1356,13 @@ select.uk-form-width-xsmall {
  * Icons
  */
 .uk-radio:checked {
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/form-radio.svg")', 'escape("#000")', 'escape("#fff")', "g"); }
+  @svg-fill ($internal-form-radio-image, "#000", $form-radio-checked-icon-color); }
 
 .uk-checkbox:checked {
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/form-checkbox.svg")', 'escape("#000")', 'escape("#fff")', "g"); }
+  @svg-fill ($internal-form-checkbox-image, "#000", $form-radio-checked-icon-color); }
 
 .uk-checkbox:indeterminate {
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/form-checkbox-indeterminate.svg")', 'escape("#000")', 'escape("#fff")', "g"); }
+  @svg-fill ($internal-form-checkbox-indeterminate-image, "#000", $form-radio-checked-icon-color); }
 
 /*
  * Disabled
@@ -1379,13 +1372,13 @@ select.uk-form-width-xsmall {
   background-color: #f8f8f8; }
 
 .uk-radio:disabled:checked {
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/form-radio.svg")', 'escape("#000")', 'escape("#999")', "g"); }
+  @svg-fill ($internal-form-radio-image, "#000", $form-radio-disabled-icon-color); }
 
 .uk-checkbox:disabled:checked {
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/form-checkbox.svg")', 'escape("#000")', 'escape("#999")', "g"); }
+  @svg-fill ($internal-form-checkbox-image, "#000", $form-radio-disabled-icon-color); }
 
 .uk-checkbox:disabled:indeterminate {
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/form-checkbox-indeterminate.svg")', 'escape("#000")', 'escape("#999")', "g"); }
+  @svg-fill ($internal-form-checkbox-indeterminate-image, "#000", $form-radio-disabled-icon-color); }
 
 /* Legend
  ========================================================================== */
@@ -2234,7 +2227,8 @@ select.uk-form-width-xsmall {
  * 2. Take the full width, at least 100%. Only if no class from the Width component is set.
  * 3. Expand width even if larger than 100%, e.g. because of negative margin (Needed for nested grids)
  */
-.uk-grid-match > * {
+.uk-grid-match > *,
+.uk-grid-item-match {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -2242,7 +2236,8 @@ select.uk-form-width-xsmall {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.uk-grid-match > * > *:not([class*='uk-width']) {
+.uk-grid-match > * > :not([class*='uk-width']),
+.uk-grid-item-match > :not([class*='uk-width']) {
   /* 2 */
   box-sizing: border-box;
   width: 100%;
@@ -2633,28 +2628,28 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-alert-primary {
-  background: tint(#1e87f0, 40%);
+  background: #7ebaf6;
   color: #1e87f0; }
 
 /*
  * Success
  */
 .uk-alert-success {
-  background: tint(#32d296, 40%);
+  background: #9be9cc;
   color: #32d296; }
 
 /*
  * Warning
  */
 .uk-alert-warning {
-  background: tint(#faa05a, 45%);
+  background: #fccba4;
   color: #faa05a; }
 
 /*
  * Danger
  */
 .uk-alert-danger {
-  background: tint(#f0506e, 40%);
+  background: #f8aebc;
   color: #f0506e; }
 
 /* ========================================================================
@@ -2752,13 +2747,13 @@ select.uk-form-width-xsmall {
  * Default
  */
 .uk-overlay-default {
-  background: rgba(255, 255, 255, 0.8); }
+  background: fade(#fff, 80%); }
 
 /*
  * Primary
  */
 .uk-overlay-primary {
-  background: rgba(34, 34, 34, 0.8); }
+  background: fade(#222, 80%); }
 
 /* ========================================================================
    Component: Article
@@ -3186,15 +3181,15 @@ ul.uk-nav-sub {
  ========================================================================== */
 .uk-nav-parent-icon > .uk-parent > a::after {
   content: "";
-  width: 1.5;
-  height: 1.5;
+  width: 1.5em;
+  height: 1.5em;
   float: right;
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/nav-parent-close.svg")', 'escape("#000")', 'escape("#444")', "g");
+  @svg-fill ($internal-nav-parent-close-image, "#000", $nav-parent-icon-color);
   background-repeat: no-repeat;
   background-position: 50% 50%; }
 
 .uk-nav-parent-icon > .uk-parent.uk-open > a::after {
-  background-image: replace('data-uri("image/svg+xml;charset=UTF-8", "../../images/backgrounds/nav-parent-open.svg")', 'escape("#000")', 'escape("#444")', "g"); }
+  @svg-fill ($internal-nav-parent-open-image, "#000", $nav-parent-icon-color); }
 
 /* Header
  ========================================================================== */
@@ -5596,7 +5591,7 @@ ul.uk-nav-sub {
   width: 50%; }
 
 .uk-child-width-1-3 > * {
-  width: 33.33%; }
+  width: calc(100% * 1 / 3.001); }
 
 .uk-child-width-1-4 > * {
   width: 25%; }
@@ -5605,7 +5600,7 @@ ul.uk-nav-sub {
   width: 20%; }
 
 .uk-child-width-1-6 > * {
-  width: 16.66%; }
+  width: calc(100% * 1 / 6.001); }
 
 .uk-child-width-auto > * {
   width: auto; }
@@ -5642,13 +5637,13 @@ ul.uk-nav-sub {
   .uk-child-width-1-2\@s > * {
     width: 50%; }
   .uk-child-width-1-3\@s > * {
-    width: 33.33%; }
+    width: calc(100% * 1 / 3.001); }
   .uk-child-width-1-4\@s > * {
     width: 25%; }
   .uk-child-width-1-5\@s > * {
     width: 20%; }
   .uk-child-width-1-6\@s > * {
-    width: 16.66%; }
+    width: calc(100% * 1 / 6.001); }
   .uk-child-width-auto\@s > * {
     width: auto; }
   .uk-child-width-expand\@s > * {
@@ -5668,13 +5663,13 @@ ul.uk-nav-sub {
   .uk-child-width-1-2\@m > * {
     width: 50%; }
   .uk-child-width-1-3\@m > * {
-    width: 33.33%; }
+    width: calc(100% * 1 / 3.001); }
   .uk-child-width-1-4\@m > * {
     width: 25%; }
   .uk-child-width-1-5\@m > * {
     width: 20%; }
   .uk-child-width-1-6\@m > * {
-    width: 16.66%; }
+    width: calc(100% * 1 / 6.001); }
   .uk-child-width-auto\@m > * {
     width: auto; }
   .uk-child-width-expand\@m > * {
@@ -5694,13 +5689,13 @@ ul.uk-nav-sub {
   .uk-child-width-1-2\@l > * {
     width: 50%; }
   .uk-child-width-1-3\@l > * {
-    width: 33.32%; }
+    width: calc(100% * 1 / 3.001); }
   .uk-child-width-1-4\@l > * {
     width: 25%; }
   .uk-child-width-1-5\@l > * {
     width: 20%; }
   .uk-child-width-1-6\@l > * {
-    width: 16.66%; }
+    width: calc(100% * 1 / 6.001); }
   .uk-child-width-auto\@l > * {
     width: auto; }
   .uk-child-width-expand\@l > * {
@@ -5720,13 +5715,13 @@ ul.uk-nav-sub {
   .uk-child-width-1-2\@xl > * {
     width: 50%; }
   .uk-child-width-1-3\@xl > * {
-    width: 33.32%; }
+    width: calc(100% * 1 / 3.001); }
   .uk-child-width-1-4\@xl > * {
     width: 25%; }
   .uk-child-width-1-5\@xl > * {
     width: 20%; }
   .uk-child-width-1-6\@xl > * {
-    width: 16.66%; }
+    width: calc(100% * 1 / 6.001); }
   .uk-child-width-auto\@xl > * {
     width: auto; }
   .uk-child-width-expand\@xl > * {
@@ -5756,10 +5751,10 @@ ul.uk-nav-sub {
 
 /* Thirds */
 .uk-width-1-3 {
-  width: 33.32%; }
+  width: calc(100% * 1 / 3.001); }
 
 .uk-width-2-3 {
-  width: 66.64%; }
+  width: calc(100% * 2 / 3.001); }
 
 /* Quarters */
 .uk-width-1-4 {
@@ -5783,10 +5778,10 @@ ul.uk-nav-sub {
 
 /* Sixths */
 .uk-width-1-6 {
-  width: 16.66%; }
+  width: calc(100% * 1 / 6.001); }
 
 .uk-width-5-6 {
-  width: 83.31%; }
+  width: calc(100% * 5 / 6.001); }
 
 /* Pixel */
 .uk-width-small {
@@ -5828,9 +5823,9 @@ ul.uk-nav-sub {
     width: 50%; }
   /* Thirds */
   .uk-width-1-3\@s {
-    width: 33.32%; }
+    width: calc(100% * 1 / 3.001); }
   .uk-width-2-3\@s {
-    width: 66.64%; }
+    width: calc(100% * 2 / 3.001); }
   /* Quarters */
   .uk-width-1-4\@s {
     width: 25%; }
@@ -5847,9 +5842,9 @@ ul.uk-nav-sub {
     width: 80%; }
   /* Sixths */
   .uk-width-1-6\@s {
-    width: 16.66%; }
+    width: calc(100% * 1 / 6.001); }
   .uk-width-5-6\@s {
-    width: 83.31%; }
+    width: calc(100% * 5 / 6.001); }
   /* Pixel */
   .uk-width-small\@s {
     width: 150px; }
@@ -5884,9 +5879,9 @@ ul.uk-nav-sub {
     width: 50%; }
   /* Thirds */
   .uk-width-1-3\@m {
-    width: 33.32%; }
+    width: calc(100% * 1 / 3.001); }
   .uk-width-2-3\@m {
-    width: 66.64%; }
+    width: calc(100% * 2 / 3.001); }
   /* Quarters */
   .uk-width-1-4\@m {
     width: 25%; }
@@ -5903,9 +5898,9 @@ ul.uk-nav-sub {
     width: 80%; }
   /* Sixths */
   .uk-width-1-6\@m {
-    width: 16.66%; }
+    width: calc(100% * 1 / 6.001); }
   .uk-width-5-6\@m {
-    width: 83.31%; }
+    width: calc(100% * 5 / 6.001); }
   /* Pixel */
   .uk-width-small\@m {
     width: 150px; }
@@ -5940,9 +5935,9 @@ ul.uk-nav-sub {
     width: 50%; }
   /* Thirds */
   .uk-width-1-3\@l {
-    width: 33.32%; }
+    width: calc(100% * 1 / 3.001); }
   .uk-width-2-3\@l {
-    width: 66.64%; }
+    width: calc(100% * 2 / 3.001); }
   /* Quarters */
   .uk-width-1-4\@l {
     width: 25%; }
@@ -5959,9 +5954,9 @@ ul.uk-nav-sub {
     width: 80%; }
   /* Sixths */
   .uk-width-1-6\@l {
-    width: 16.66%; }
+    width: calc(100% * 1 / 6.001); }
   .uk-width-5-6\@l {
-    width: 83.31%; }
+    width: calc(100% * 5 / 6.001); }
   /* Pixel */
   .uk-width-small\@l {
     width: 150px; }
@@ -5996,9 +5991,9 @@ ul.uk-nav-sub {
     width: 50%; }
   /* Thirds */
   .uk-width-1-3\@xl {
-    width: 33.32%; }
+    width: calc(100% * 1 / 3.001); }
   .uk-width-2-3\@xl {
-    width: 66.64%; }
+    width: calc(100% * 2 / 3.001); }
   /* Quarters */
   .uk-width-1-4\@xl {
     width: 25%; }
@@ -6015,9 +6010,9 @@ ul.uk-nav-sub {
     width: 80%; }
   /* Sixths */
   .uk-width-1-6\@xl {
-    width: 16.66%; }
+    width: calc(100% * 1 / 6.001); }
   .uk-width-5-6\@xl {
-    width: 83.31%; }
+    width: calc(100% * 5 / 6.001); }
   /* Pixel */
   .uk-width-small\@xl {
     width: 150px; }
@@ -6117,9 +6112,8 @@ ul.uk-nav-sub {
   /* 3 */
   color: #1e87f0 !important; }
 
-@supports (-webkit-background-clip: text) {
-  .uk-text-background {
-    background-color: #1e87f0; } }
+.supports-background-clip .uk-text-background {
+  background-color: #1e87f0; }
 
 /* Alignment modifiers
  ========================================================================== */
@@ -6886,6 +6880,12 @@ td.uk-text-break {
 .uk-border-rounded {
   border-radius: 5px; }
 
+/*
+ * Fix `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
+ */
+.uk-inline-clip[class*='uk-border-'] {
+  -webkit-transform: translateZ(0); }
+
 /* Box-shadow
  ========================================================================== */
 .uk-box-shadow-small {
@@ -6926,7 +6926,7 @@ td.uk-text-break {
   display: block;
   margin-right: 10px;
   float: left;
-  font-size: 5;
+  font-size: 4.5em;
   line-height: 1; }
 
 /* Logo
@@ -7673,21 +7673,21 @@ td.uk-text-break {
   margin: 15px; }
 
 .uk-position-small.uk-position-center {
-  -webkit-transform: translate("calc(-50% - 15px)", "calc(-50% - 15px)");
-  -ms-transform: translate("calc(-50% - 15px)", "calc(-50% - 15px)");
-      transform: translate("calc(-50% - 15px)", "calc(-50% - 15px)"); }
+  -webkit-transform: translate(calc(-50% - 15px), calc(-50% - 15px));
+  -ms-transform: translate(calc(-50% - 15px), calc(-50% - 15px));
+      transform: translate(calc(-50% - 15px), calc(-50% - 15px)); }
 
 .uk-position-small.uk-position-center-left,
 .uk-position-small.uk-position-center-right {
-  -webkit-transform: translateY("calc(-50% - 15px)");
-  -ms-transform: translateY("calc(-50% - 15px)");
-      transform: translateY("calc(-50% - 15px)"); }
+  -webkit-transform: translateY(calc(-50% - 15px));
+  -ms-transform: translateY(calc(-50% - 15px));
+      transform: translateY(calc(-50% - 15px)); }
 
 .uk-position-small.uk-position-top-center,
 .uk-position-small.uk-position-bottom-center {
-  -webkit-transform: translateX("calc(-50% - 15px)");
-  -ms-transform: translateX("calc(-50% - 15px)");
-      transform: translateX("calc(-50% - 15px)"); }
+  -webkit-transform: translateX(calc(-50% - 15px));
+  -ms-transform: translateX(calc(-50% - 15px));
+      transform: translateX(calc(-50% - 15px)); }
 
 /*
  * Medium
@@ -7696,21 +7696,21 @@ td.uk-text-break {
   margin: 30px; }
 
 .uk-position-medium.uk-position-center {
-  -webkit-transform: translate("calc(-50% - 30px)", "calc(-50% - 30px)");
-  -ms-transform: translate("calc(-50% - 30px)", "calc(-50% - 30px)");
-      transform: translate("calc(-50% - 30px)", "calc(-50% - 30px)"); }
+  -webkit-transform: translate(calc(-50% - 30px), calc(-50% - 30px));
+  -ms-transform: translate(calc(-50% - 30px), calc(-50% - 30px));
+      transform: translate(calc(-50% - 30px), calc(-50% - 30px)); }
 
 .uk-position-medium.uk-position-center-left,
 .uk-position-medium.uk-position-center-right {
-  -webkit-transform: translateY("calc(-50% - 30px)");
-  -ms-transform: translateY("calc(-50% - 30px)");
-      transform: translateY("calc(-50% - 30px)"); }
+  -webkit-transform: translateY(calc(-50% - 30px));
+  -ms-transform: translateY(calc(-50% - 30px));
+      transform: translateY(calc(-50% - 30px)); }
 
 .uk-position-medium.uk-position-top-center,
 .uk-position-medium.uk-position-bottom-center {
-  -webkit-transform: translateX("calc(-50% - 30px)");
-  -ms-transform: translateX("calc(-50% - 30px)");
-      transform: translateX("calc(-50% - 30px)"); }
+  -webkit-transform: translateX(calc(-50% - 30px));
+  -ms-transform: translateX(calc(-50% - 30px));
+      transform: translateX(calc(-50% - 30px)); }
 
 /* ========================================================================
    Component: Transition
@@ -7924,6 +7924,40 @@ td.uk-text-break {
   visibility: hidden !important; }
 
 /* ========================================================================
+   Component: Inverse
+ ========================================================================== */
+/*
+ * Implemented class depends on the general theme color
+ * `uk-light` is for light colors on dark backgrounds
+ * `uk-dark` is or dark colors on light backgrounds
+ */
+.uk-light .uk-logo, .uk-section-primary:not(.uk-preserve-color) .uk-logo, .uk-section-secondary:not(.uk-preserve-color) .uk-logo, .uk-tile-primary:not(.uk-preserve-color) .uk-logo, .uk-tile-secondary:not(.uk-preserve-color) .uk-logo, .uk-card-primary.uk-card-body .uk-logo, .uk-card-primary > :not([class*='uk-card-media']) .uk-logo, .uk-card-secondary.uk-card-body .uk-logo, .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo, .uk-overlay-primary .uk-logo, .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo, .uk-offcanvas-bar .uk-logo {
+  color: #fff; }
+
+.uk-light .uk-logo:hover, .uk-section-primary:not(.uk-preserve-color) .uk-logo:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-logo:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-logo:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-logo:hover, .uk-card-primary.uk-card-body .uk-logo:hover, .uk-card-primary > :not([class*='uk-card-media']) .uk-logo:hover, .uk-card-secondary.uk-card-body .uk-logo:hover, .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo:hover, .uk-overlay-primary .uk-logo:hover, .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo:hover, .uk-offcanvas-bar .uk-logo:hover,
+.uk-light .uk-logo:focus, .uk-section-primary:not(.uk-preserve-color) .uk-logo:focus, .uk-section-secondary:not(.uk-preserve-color) .uk-logo:focus, .uk-tile-primary:not(.uk-preserve-color) .uk-logo:focus, .uk-tile-secondary:not(.uk-preserve-color) .uk-logo:focus, .uk-card-primary.uk-card-body .uk-logo:focus, .uk-card-primary > :not([class*='uk-card-media']) .uk-logo:focus, .uk-card-secondary.uk-card-body .uk-logo:focus, .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo:focus, .uk-overlay-primary .uk-logo:focus, .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo:focus, .uk-offcanvas-bar .uk-logo:focus {
+  color: #fff; }
+
+.uk-light .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-section-primary:not(.uk-preserve-color) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-section-secondary:not(.uk-preserve-color) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-tile-primary:not(.uk-preserve-color) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-tile-secondary:not(.uk-preserve-color) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-card-primary.uk-card-body .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-card-primary > :not([class*='uk-card-media']) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-card-secondary.uk-card-body .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-overlay-primary .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-offcanvas-bar .uk-logo > :not(.uk-logo-inverse):not(:only-of-type) {
+  display: none; }
+
+.uk-light .uk-logo-inverse, .uk-section-primary:not(.uk-preserve-color) .uk-logo-inverse, .uk-section-secondary:not(.uk-preserve-color) .uk-logo-inverse, .uk-tile-primary:not(.uk-preserve-color) .uk-logo-inverse, .uk-tile-secondary:not(.uk-preserve-color) .uk-logo-inverse, .uk-card-primary.uk-card-body .uk-logo-inverse, .uk-card-primary > :not([class*='uk-card-media']) .uk-logo-inverse, .uk-card-secondary.uk-card-body .uk-logo-inverse, .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo-inverse, .uk-overlay-primary .uk-logo-inverse, .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo-inverse, .uk-offcanvas-bar .uk-logo-inverse {
+  display: inline; }
+
+.uk-dark .uk-logo, .uk-section-primary:not(.uk-preserve-color) .uk-logo, .uk-section-secondary:not(.uk-preserve-color) .uk-logo, .uk-tile-primary:not(.uk-preserve-color) .uk-logo, .uk-tile-secondary:not(.uk-preserve-color) .uk-logo, .uk-card-primary.uk-card-body .uk-logo, .uk-card-primary > :not([class*='uk-card-media']) .uk-logo, .uk-card-secondary.uk-card-body .uk-logo, .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo, .uk-overlay-primary .uk-logo, .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo, .uk-offcanvas-bar .uk-logo {
+  color: #fff; }
+
+.uk-dark .uk-logo:hover, .uk-section-primary:not(.uk-preserve-color) .uk-logo:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-logo:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-logo:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-logo:hover, .uk-card-primary.uk-card-body .uk-logo:hover, .uk-card-primary > :not([class*='uk-card-media']) .uk-logo:hover, .uk-card-secondary.uk-card-body .uk-logo:hover, .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo:hover, .uk-overlay-primary .uk-logo:hover, .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo:hover, .uk-offcanvas-bar .uk-logo:hover,
+.uk-dark .uk-logo:focus, .uk-section-primary:not(.uk-preserve-color) .uk-logo:focus, .uk-section-secondary:not(.uk-preserve-color) .uk-logo:focus, .uk-tile-primary:not(.uk-preserve-color) .uk-logo:focus, .uk-tile-secondary:not(.uk-preserve-color) .uk-logo:focus, .uk-card-primary.uk-card-body .uk-logo:focus, .uk-card-primary > :not([class*='uk-card-media']) .uk-logo:focus, .uk-card-secondary.uk-card-body .uk-logo:focus, .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo:focus, .uk-overlay-primary .uk-logo:focus, .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo:focus, .uk-offcanvas-bar .uk-logo:focus {
+  color: #fff; }
+
+.uk-dark .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-section-primary:not(.uk-preserve-color) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-section-secondary:not(.uk-preserve-color) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-tile-primary:not(.uk-preserve-color) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-tile-secondary:not(.uk-preserve-color) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-card-primary.uk-card-body .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-card-primary > :not([class*='uk-card-media']) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-card-secondary.uk-card-body .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-overlay-primary .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type), .uk-offcanvas-bar .uk-logo > :not(.uk-logo-inverse):not(:only-of-type) {
+  display: none; }
+
+.uk-dark .uk-logo-inverse, .uk-section-primary:not(.uk-preserve-color) .uk-logo-inverse, .uk-section-secondary:not(.uk-preserve-color) .uk-logo-inverse, .uk-tile-primary:not(.uk-preserve-color) .uk-logo-inverse, .uk-tile-secondary:not(.uk-preserve-color) .uk-logo-inverse, .uk-card-primary.uk-card-body .uk-logo-inverse, .uk-card-primary > :not([class*='uk-card-media']) .uk-logo-inverse, .uk-card-secondary.uk-card-body .uk-logo-inverse, .uk-card-secondary > :not([class*='uk-card-media']) .uk-logo-inverse, .uk-overlay-primary .uk-logo-inverse, .uk-navbar-container:not(.uk-navbar-transparent) .uk-logo-inverse, .uk-offcanvas-bar .uk-logo-inverse {
+  display: inline; }
+
+/* ========================================================================
    Component: Print
  ========================================================================== */
 @media print {
@@ -7959,7 +7993,6 @@ td.uk-text-break {
   h3 {
     page-break-after: avoid; } }
 
-/* custom upgrades to UiKit3 */
 /*===============================================
 /* Component: Base
 ===============================================*/

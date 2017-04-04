@@ -2,20 +2,15 @@
 /*===============================================
 /* Imports
 ===============================================*/
-@import "vendor/uikit/v3/uikit-mixins.scss";
+/* uikit mixins */
+@import "vendor/uikit/uikit-mixins.scss";
 
 /* custom variables and mixins */
 @import "variable-overrides.scss";
 
-/* new uikit3 variables */
-// @import "variable-uikit3.scss";
+/* uikit */
+@import "vendor/uikit/uikit.scss";
 
-@import "vendor/uikit/v3/uikit.scss";
-
-// @import "vendor/uikit/components/autocomplete.scss";
-
-/* custom upgrades to UiKit3 */
-// @import "vendor/uikit/upgrade/uikit3.scss";
 
 /*===============================================
 /* Component: Base

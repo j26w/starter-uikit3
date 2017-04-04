@@ -1,52 +1,20 @@
-// LESS related
-@import "core/variables.scss";
+//
+// Core
+//
 
-// Defaults
-@import "core/base.scss";
+// Components
+// @import "uikit-mixins.scss"; // moved to style.css
+@import "components/variables.scss";
+@import "uikit-variables.scss";
+@import "components/_import.components.scss";
 
-// Layout
-@import "core/grid.scss";
-@import "core/panel.scss";
-@import "core/block.scss";
-@import "core/article.scss";
-@import "core/comment.scss";
-@import "core/cover.scss";
+// All optional components
+@import "components/iconnav.scss";
+@import "components/notification.scss";
+@import "components/tooltip.scss";
+@import "components/placeholder.scss";
+@import "components/progress.scss";
+@import "components/sortable.scss";
 
-// Navs
-@import "core/nav.scss";
-@import "core/navbar.scss";
-@import "core/subnav.scss";
-@import "core/breadcrumb.scss";
-@import "core/pagination.scss";
-@import "core/tab.scss";
-@import "core/thumbnav.scss";
-
-// Elements
-@import "core/list.scss";
-@import "core/description-list.scss";
-@import "core/table.scss";
-@import "core/form.scss";
-
-// Common
-@import "core/button.scss";
-@import "core/icon.scss";
-@import "core/close.scss";
-@import "core/badge.scss";
-@import "core/alert.scss";
-@import "core/thumbnail.scss";
-@import "core/overlay.scss";
-@import "core/column.scss";
-@import "core/animation.scss";
-
-// JavaScript
-@import "core/dropdown.scss";
-@import "core/modal.scss";
-@import "core/offcanvas.scss";
-@import "core/switcher.scss";
-
-// Need to be loaded last
-@import "core/text.scss";
-@import "core/utility.scss";
-@import "core/flex.scss";
-@import "core/contrast.scss";
-@import "core/print.scss";
+// Utilities
+@import "components/_import.utilities.scss";

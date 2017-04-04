@@ -1,28 +1,12 @@
 // Name:            Slidenav
-// Description:     Defines styles for a previous/next navigation between slides
+// Description:     Component to create previous/next icon navigations
 //
 // Component:       `uk-slidenav`
 //
+// Sub-objects:     `uk-slidenav-container`
+//
 // Modifiers:       `uk-slidenav-previous`
 //                  `uk-slidenav-next`
-//                  `uk-slidenav-contrast`
-//
-// Sub-objects:     `uk-slidenav-position`
-//
-// Uses:            Icon: FontAwesome
-//
-// Markup:
-//
-// <!-- uk-slidenav -->
-// <a href="" class="uk-slidenav uk-slidenav-previous"></a>
-// <a href="" class="uk-slidenav uk-slidenav-next"></a>
-//
-// <!-- uk-slidenav-position -->
-// <div class="uk-slidenav-position">
-//     <img src="" alt="">
-//     <a href="" class="uk-slidenav uk-slidenav-previous"></a>
-//     <a href="" class="uk-slidenav uk-slidenav-next"></a>
-// </div>
 //
 // ========================================================================
 
@@ -30,24 +14,12 @@
 // Variables
 // ========================================================================
 
-$slidenav-width:                                 60px !default;
-$slidenav-height:                                $slidenav-width !default;
-$slidenav-color:                                 rgba(50,50,50,0.4) !default;
-$slidenav-font-size:                             60px !default;
-$slidenav-line-height:                           $slidenav-height !default;
-$slidenav-previous-icon:                         "\f104" !default;
-$slidenav-next-icon:                             "\f105" !default;
+$slidenav-padding:                               5px !default;
+$slidenav-color:                                 fadeout($global-color, 40%) !default;
 
-$slidenav-hover-color:                           rgba(50,50,50,0.7) !default;
+$slidenav-hover-color:                           fadeout($global-color, 20%) !default;
 
-$slidenav-active-color:                          rgba(50,50,50,0.9) !default;
-
-$slidenav-position-previous:                     20px !default;
-$slidenav-position-next:                         $slidenav-position-previous !default;
-
-$slidenav-contrast-color:                        rgba(255,255,255,0.5) !default;
-$slidenav-contrast-hover-color:                  rgba(255,255,255,0.7) !default;
-$slidenav-contrast-active-color:                 rgba(255,255,255,0.9) !default;
+$slidenav-active-color:                          fadeout($global-color, 10%) !default;
 
 
 /* ========================================================================
@@ -55,117 +27,58 @@ $slidenav-contrast-active-color:                 rgba(255,255,255,0.9) !default;
  ========================================================================== */
 
 /*
- * 1. Required for `a` elements
- * 2. Dimension
- * 3. Style
+ * Adopts `uk-icon`
  */
 
 .uk-slidenav {
-    /* 1 */
-    display: inline-block;
-    /* 2 */
-    box-sizing: border-box;
-    width: $slidenav-width;
-    height: $slidenav-height;
-    /* 3 */
-    line-height: $slidenav-line-height;
+    padding: $slidenav-padding;
     color: $slidenav-color;
-    font-size: $slidenav-font-size;
-    text-align: center;
     @include hook-slidenav();
 }
 
-/*
- * Hover
- * 1. Apply hover style also to focus state
- * 2. Remove default focus style
- * 3. Required for `a` elements
- * 4. Style
- */
-
+/* Hover + Focus */
 .uk-slidenav:hover,
-.uk-slidenav:focus { // 1
-    /* 2 */
-    outline: none;
-    /* 3 */
-    text-decoration: none;
-    /* 4 */
+.uk-slidenav:focus {
     color: $slidenav-hover-color;
-    cursor: pointer;
+    outline: none;
     @include hook-slidenav-hover();
 }
 
-/* Active */
+/* OnClick */
 .uk-slidenav:active {
     color: $slidenav-active-color;
     @include hook-slidenav-active();
 }
 
-/*
- * Icons
- */
 
-.uk-slidenav-previous:before {
-    content: $slidenav-previous-icon;
-    font-family: FontAwesome;
-}
-
-.uk-slidenav-next:before {
-    content: $slidenav-next-icon;
-    font-family: FontAwesome;
-}
-
-
-/* Sub-object: `uk-slidenav-position`
+/* Icon modifier
  ========================================================================== */
 
 /*
- * Create position context
+ * Previous
  */
 
-.uk-slidenav-position { position: relative; }
-
-/*
- * Center vertically
- */
-
-.uk-slidenav-position .uk-slidenav {
-    display: none;
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    margin-top: -($slidenav-height / 2);
+.uk-slidenav-previous {
+    @include hook-slidenav-previous();
 }
 
-.uk-slidenav-position:hover .uk-slidenav { display: block; }
+/*
+ * Next
+ */
 
-.uk-slidenav-position .uk-slidenav-previous { left: $slidenav-position-previous; }
-.uk-slidenav-position .uk-slidenav-next { right: $slidenav-position-next; }
+.uk-slidenav-next {
+    @include hook-slidenav-next();
+}
 
 
-/* Modifier: `uk-slidenav-contrast`
+/* Container
  ========================================================================== */
 
-.uk-slidenav-contrast {
-    color: $slidenav-contrast-color;
-    @include hook-slidenav-contrast();
-}
-
-/*
- * Hover
- * 1. Apply hover style also to focus state
- */
-
-.uk-slidenav-contrast:hover,
-.uk-slidenav-contrast:focus { // 1
-    color: $slidenav-contrast-hover-color;
-    @include hook-slidenav-contrast-hover();
-}
-
-/* Active */
-.uk-slidenav-contrast:active {
-    color: $slidenav-contrast-active-color;
-    @include hook-slidenav-contrast-active();
+.uk-slidenav-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include hook-slidenav-container();
 }
 
 
@@ -177,7 +90,39 @@ $slidenav-contrast-active-color:                 rgba(255,255,255,0.9) !default;
 // @mixin hook-slidenav(){}
 // @mixin hook-slidenav-hover(){}
 // @mixin hook-slidenav-active(){}
-// @mixin hook-slidenav-contrast(){}
-// @mixin hook-slidenav-contrast-hover(){}
-// @mixin hook-slidenav-contrast-active(){}
+// @mixin hook-slidenav-previous(){}
+// @mixin hook-slidenav-next(){}
+// @mixin hook-slidenav-container(){}
 // @mixin hook-slidenav-misc(){}
+
+
+// Inverse
+// ========================================================================
+
+$inverse-slidenav-color:                        fadeout($inverse-global-color, 40%) !default;
+$inverse-slidenav-hover-color:                  fadeout($inverse-global-color, 20%) !default;
+$inverse-slidenav-active-color:                 fadeout($inverse-global-color, 10%) !default;
+
+@mixin hook-inverse(){
+
+    .uk-slidenav {
+        color: $inverse-slidenav-color;
+        @include hook-inverse-slidenav();
+    }
+
+    .uk-slidenav:hover,
+    .uk-slidenav:focus {
+        color: $inverse-slidenav-hover-color;
+        @include hook-inverse-slidenav-hover();
+    }
+
+    .uk-slidenav:active {
+        color: $inverse-slidenav-active-color;
+        @include hook-inverse-slidenav-active();
+    }
+
+}
+
+// @mixin hook-inverse-slidenav(){}
+// @mixin hook-inverse-slidenav-hover(){}
+// @mixin hook-inverse-slidenav-active(){}
